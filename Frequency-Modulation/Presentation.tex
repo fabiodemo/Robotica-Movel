@@ -146,10 +146,23 @@ Disciplina de Robótica Móvel\\
 %------------------------------------------------
 \section[Introdução]{Introdução} 
 %------------------------------------------------
-\begin{frame}
+\begin{frame}[allowframebreaks, fragile]
 \frametitle{Introdução}
 	\begin{itemize}
-		\item \textit{Recurrent Neural Networks} (RNNs) são uma classe de redes que podem prever o futuro 
+		\item O Radar de onda contínua com modulação de frequência (FMCW) é uma técnica alternativa ao Phase-shift measurement;
+		\item Essa técnica envolve a transmissão de uma onda eletromagnética contínua modulada por um sinal triangular periódico que ajusta a frequência da portadora acima e abaixo da frequência média f0, conforme figura abaixo:
+        \begin{figure}
+            \centering
+            \copyrightbox[b]{\includegraphics[scale=0.7]{figures/1_curva_de_frequencia.png}}%
+            {Fonte: \cite{everett1995sensors}}
+            \caption{A curva de frequência recebida é deslocada ao longo do eixo do tempo em relação à frequência de referência.}
+            \label{fig:curva_de_freq}
+        \end{figure}
+		\item O transmissor emite um sinal que varia em frequência como uma função linear do tempo;
+		\begin{equation}
+            f(t) = f_0 + at
+        \end{equation}
+
 		\item Citação: \cite{everett1995sensors}
 	\end{itemize}
 \end{frame}
