@@ -1,25 +1,4 @@
 \frametitle{Recurrent Neurons and Layers}
 	\begin{itemize}
 		\item Semelhante a uma Feedforward Neural Network, sem conexões apontando para trás;
-            \item Cada time step (frame ou passo de tempo), o neurônio recorrente receberá as entradas de $x_{(t)}$;
-            \item É possível representar uma pequena rede através desenrolada em um eixo de tempo, como visto na Figura \ref{fig:RNN_Simples};
-
-            \begin{figure}
-                \centering
-                \copyrightbox[b]{\includegraphics[scale=0.25]{figures/RNN_Simples.png}}%
-                {Fonte: \cite{Geron_2023}}
-                \caption{Neurônio simples (esquerda) desenrolado através\\ do tempo (direita)}
-                \label{fig:RNN_Simples}
-            \end{figure}
-
-        \item Podemos ver no lado direito da figura \ref{fig:RNN_Simples} um layer (\textit{camada} de neurônios recorrentes), onde cada time step (frame ou passo de tempo), o neurônio recorrente receberá as entradas de $x(_t)$, bem como a saída do seu próprio passo de tempo;
-
-        \item Abaixo podemos observar um modelo simples, representando a rede da Figura \ref{fig:RNN_Simples}
-        \begin{lstlisting}[language=python]
-model = tf.keras.Sequential([
-    tf.keras.layers.simpleRNN(1,
-                              input_shape=[None, 1])
-])
-\end{lstlisting}
-
 	\end{itemize}

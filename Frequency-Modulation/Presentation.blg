@@ -1,15 +1,9 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
-[0] Config.pm:310> INFO - Logfile is 'Presentation.blg'
-[224] biber-MSWIN64:340> INFO - === 
-[282] Biber.pm:419> INFO - Reading 'Presentation.bcf'
-[479] Biber.pm:979> INFO - Found 3 citekeys in bib section 0
-[506] Biber.pm:4419> INFO - Processing section 0
-[524] Biber.pm:4610> INFO - Looking for bibtex file 'bibliography.bib' for section 0
-[610] bibtex.pm:1713> INFO - LaTeX decoding ...
-[630] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
-[711] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[712] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'variable = shifted' with 'variable = non-ignorable'
-[712] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'pt-BR'
-[712] Biber.pm:4245> INFO - No sort tailoring available for locale 'pt-BR'
-[718] bbl.pm:660> INFO - Writing 'Presentation.bbl' with encoding 'UTF-8'
-[721] bbl.pm:763> INFO - Output to Presentation.bbl
+[1] Config.pm:310> INFO - Logfile is 'Presentation.blg'
+[348] biber-MSWIN64:340> INFO - === 
+[436] Biber.pm:419> INFO - Reading 'Presentation.bcf'
+[692] Biber.pm:979> INFO - Found 0 citekeys in bib section 0
+[730] bbl.pm:660> INFO - Writing 'Presentation.bbl' with encoding 'UTF-8'
+[731] bbl.pm:763> INFO - Output to Presentation.bbl
+[731] Biber.pm:131> WARN - The file 'Presentation.bcf' does not contain any citations!
+[732] Biber.pm:133> INFO - WARNINGS: 1

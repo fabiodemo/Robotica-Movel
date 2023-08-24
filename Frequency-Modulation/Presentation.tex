@@ -108,7 +108,7 @@
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
 
-\title[]{Recurrent Neural Network} % The short title appears at the bottom of every slide, the full title is only on the title page
+\title[]{Frequency Modulation} % The short title appears at the bottom of every slide, the full title is only on the title page
 
 \author[]{Fábio Demo da Rosa} % Your name
 %\includegraphics[]{logositeredes.png}
@@ -116,11 +116,11 @@
 {
 Universidade Federal de Santa Maria \\ % Your institution for the title page
 Pós-Graduação em Ciência da Computação \\
-% Aluno Especial\\
+Disciplina de Robótica Móvel\\
 \medskip
 \textit{faberdemo@gmail.com} % Your email address
 }
-\date{\today} % Date, can be changed to a custom date
+\date{25 de Agosto de 2023} % Date, can be changed to a custom date
 \newcounter{saveenumi}
 \newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
 \newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
@@ -149,28 +149,7 @@ Pós-Graduação em Ciência da Computação \\
 \begin{frame}
 \frametitle{Introdução}
 	\begin{itemize}
-		%\item Crescimento da necessidade da privacidade;
-		\item \textit{Recurrent Neural Networks} (RNNs) são uma classe de redes que podem prever o futuro (até certo ponto);
-        \item As RNNs podem analisar informações como:
-        \begin{itemize}
-            \item Séries temporais (\textit{time series});
-            \item Usuário ativos em determinado website;
-            \item Temperatura em determinada cidade;
-            \item Consumo de energia;
-            \item Trajetória de carros;
-            \item entre outros.
-        \end{itemize}
-        \item Prevê o futuro, desde que mantenham-se os padrões passados;
-        \item No geral, RNNs também trabalham com sequências de tamanhos arbitrários, alguns exemplos disso são:
-        \begin{itemize}
-            \item Documentos
-            \item Áudios.
-        \end{itemize}
-        \item Isto as torna extremamente úteis para processamento de linguagem natural.
-        \begin{itemize}
-            \item Tradução automática;
-            \item \textit{Speech-to-text}.
-        \end{itemize}
+		\item \textit{Recurrent Neural Networks} (RNNs) são uma classe de redes que podem prever o futuro 
 	\end{itemize}
 \end{frame}
 
@@ -183,27 +162,6 @@ Pós-Graduação em Ciência da Computação \\
 \frametitle{Recurrent Neurons and Layers}
 	\begin{itemize}
 		\item Semelhante a uma Feedforward Neural Network, sem conexões apontando para trás;
-            \item Cada time step (frame ou passo de tempo), o neurônio recorrente receberá as entradas de $x_{(t)}$;
-            \item É possível representar uma pequena rede através desenrolada em um eixo de tempo, como visto na Figura \ref{fig:RNN_Simples};
-
-            \begin{figure}
-                \centering
-                \copyrightbox[b]{\includegraphics[scale=0.25]{figures/RNN_Simples.png}}%
-                {Fonte: \cite{Geron_2023}}
-                \caption{Neurônio simples (esquerda) desenrolado através\\ do tempo (direita)}
-                \label{fig:RNN_Simples}
-            \end{figure}
-
-        \item Podemos ver no lado direito da figura \ref{fig:RNN_Simples} um layer (\textit{camada} de neurônios recorrentes), onde cada time step (frame ou passo de tempo), o neurônio recorrente receberá as entradas de $x(_t)$, bem como a saída do seu próprio passo de tempo;
-        
-        \item Abaixo podemos observar um modelo simples, representando a rede da Figura \ref{fig:RNN_Simples}
-        \begin{lstlisting}[language=python]
-model = tf.keras.Sequential([
-    tf.keras.layers.simpleRNN(1,
-                              input_shape=[None, 1])
-])
-\end{lstlisting}
-
 	\end{itemize}
 \end{frame}
 
