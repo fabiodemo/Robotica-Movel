@@ -1,3 +1,0 @@
-\babel@toc {brazilian}{}\relax 
-\beamer@sectionintoc {1}{Introdução}{3}{0}{1}
-\beamer@sectionintoc {2}{Recurrent Neurons and Layers}{4}{0}{2}

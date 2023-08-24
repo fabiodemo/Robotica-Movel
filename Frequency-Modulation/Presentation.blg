@@ -1,9 +1,0 @@
-[0] Config.pm:307> INFO - This is Biber 2.19
-[1] Config.pm:310> INFO - Logfile is 'Presentation.blg'
-[348] biber-MSWIN64:340> INFO - === 
-[436] Biber.pm:419> INFO - Reading 'Presentation.bcf'
-[692] Biber.pm:979> INFO - Found 0 citekeys in bib section 0
-[730] bbl.pm:660> INFO - Writing 'Presentation.bbl' with encoding 'UTF-8'
-[731] bbl.pm:763> INFO - Output to Presentation.bbl
-[731] Biber.pm:131> WARN - The file 'Presentation.bcf' does not contain any citations!
-[732] Biber.pm:133> INFO - WARNINGS: 1

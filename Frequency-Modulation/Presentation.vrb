@@ -1,4 +1,0 @@
-\frametitle{Recurrent Neurons and Layers}
-	\begin{itemize}
-		\item Semelhante a uma Feedforward Neural Network, sem conexões apontando para trás;
-	\end{itemize}
