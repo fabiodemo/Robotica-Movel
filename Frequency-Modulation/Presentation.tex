@@ -150,22 +150,15 @@ Disciplina de Robótica Móvel\\
 \frametitle{Introdução}
 	\begin{itemize}
 		\item O Radar de onda contínua com modulação de frequência (FMCW) é uma técnica alternativa ao Phase-shift measurement;
-		\item Transmissão de uma onda eletromagnética contínua modulada por um sinal triangular periódico que ajusta a frequência da portadora acima e abaixo da frequência média f0, conforme figura abaixo:
-        \begin{figure}
-            \centering
-            \copyrightbox[b]{\includegraphics[scale=0.55]{figures/1_curva_de_frequencia.png}}%
-            {Fonte: \cite{everett1995sensors}}
-            \caption{A curva de frequência recebida é deslocada ao longo do eixo do tempo em relação à frequência de referência.}
-            \label{fig:curva_de_freq}
-        \end{figure}
+		\item Transmissão de uma onda eletromagnética contínua modulada por um sinal triangular periódico que ajusta a frequência da portadora acima e abaixo da frequência média f0;
 		\item O transmissor emite um sinal que varia em frequência como uma função linear do tempo;
 		\begin{equation}
             f(t) = f_0 + at
         \end{equation}
         \item Onde:
         \begin{itemize}
-            \item $a$ = uma constante;
-            \item $t$ = tempo decorrido.
+            \item $a$ = \textit{some constant};
+            \item $t$ = \textit{elapsed time}.
         \end{itemize}
         \item O sinal é refletido no alvo e chega ao receptor em um tempo $t + T$
         \begin{equation}
@@ -173,10 +166,38 @@ Disciplina de Robótica Móvel\\
         \end{equation}
         \item Onde:
         \begin{itemize}
-            \item $T$ = tempo de propagação de ida e volta;
-            \item $d$ = distância do alvo;
-            \item $c$ = velocidade da luz.
+            \item $T$ = \textit{round-trip propagation time};
+            \item $d$ = \textit{distance to target};
+            \item $c$ = \textit{speed of light}.
         \end{itemize}
+        \begin{figure}
+            \centering
+            \copyrightbox[b]{\includegraphics[scale=0.55]{figures/1_curva_de_frequencia.png}}%
+            {Fonte: \cite{everett1995sensors}}
+            \caption{A curva de frequência recebida é deslocada ao longo do eixo do tempo em relação à frequência de referência.}
+            \label{fig:curva_de_freq}
+        \end{figure}
+        \item O sinal recebido é comparado com o sinal referência obtido diretamente do transmissor;
+        \item A curva de frequência recebida será deslocada ao longo do eixo de tempo, por um período igual ao tempo necessário para a onda se propagar e retornar;
+        \item Devido ao efeito Doppler, pode ocorrer um deslocamento no eixo de frequência.
+        \item As duas frequências da \ref{fig:curva_de_freq}, quando combinadas em um misturador, produzem uma frequência de batida $f_{b}$:
+        \begin{equation}
+            F_{b} = f(t) - f(T + t) = aT
+        \end{equation}
+        \item Essa batida de frequência é medida e usada para calcular a distância do objeto (alvo):
+        \begin{equation}
+            d = \frac{F_{b}c}{4F_{r}F{_d}}
+        \end{equation}
+        \item Onde:
+        \begin{itemize}
+            \item $c$ = range to target;
+            \item $d$ = speed of light;
+            \item $F_{b}$ = \textit{beat frequency};
+            \item $F_{r}$ = \textit{repetition (modulation) frequency};
+            \item $F_{d}$ = \textit{total FM frequency deviation}.
+        \end{itemize}
+        \item A medida da distância é proporcional a diferença ou \textit{frequency beat};
+        \item Os avanços no controle de onda de diodos laser permite essa tecnologia de alcance com radar ser usada com lasers.
 	\end{itemize}
 \end{frame}
 
