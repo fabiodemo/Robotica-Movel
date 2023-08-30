@@ -150,10 +150,10 @@ Disciplina de Robótica Móvel\\
 \frametitle{Introdução}
 	\begin{itemize}
 		\item O Radar de onda contínua com modulação de frequência (FMCW) é uma técnica alternativa ao Phase-shift measurement;
-		\item Essa técnica envolve a transmissão de uma onda eletromagnética contínua modulada por um sinal triangular periódico que ajusta a frequência da portadora acima e abaixo da frequência média f0, conforme figura abaixo:
+		\item Transmissão de uma onda eletromagnética contínua modulada por um sinal triangular periódico que ajusta a frequência da portadora acima e abaixo da frequência média f0, conforme figura abaixo:
         \begin{figure}
             \centering
-            \copyrightbox[b]{\includegraphics[scale=0.7]{figures/1_curva_de_frequencia.png}}%
+            \copyrightbox[b]{\includegraphics[scale=0.55]{figures/1_curva_de_frequencia.png}}%
             {Fonte: \cite{everett1995sensors}}
             \caption{A curva de frequência recebida é deslocada ao longo do eixo do tempo em relação à frequência de referência.}
             \label{fig:curva_de_freq}
@@ -162,8 +162,21 @@ Disciplina de Robótica Móvel\\
 		\begin{equation}
             f(t) = f_0 + at
         \end{equation}
-
-		\item Citação: \cite{everett1995sensors}
+        \item Onde:
+        \begin{itemize}
+            \item $a$ = uma constante;
+            \item $t$ = tempo decorrido.
+        \end{itemize}
+        \item O sinal é refletido no alvo e chega ao receptor em um tempo $t + T$
+        \begin{equation}
+            T = \frac{2d}{c}
+        \end{equation}
+        \item Onde:
+        \begin{itemize}
+            \item $T$ = tempo de propagação de ida e volta;
+            \item $d$ = distância do alvo;
+            \item $c$ = velocidade da luz.
+        \end{itemize}
 	\end{itemize}
 \end{frame}
 
