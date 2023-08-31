@@ -84,7 +84,7 @@
 \makeatletter
 % \beamer@nav@subsectionstyle{hide/hide/hide}
 \addtobeamertemplate{sidebar left}{%
-\hspace{0.5cm}\includegraphics[width=0.9cm, keepaspectratio]{figures/brasao_ufsm_cor.png}
+\hspace{0.5cm}\includegraphics[width=0.9cm, keepaspectratio]{figures/_brasao_ufsm_cor.png}
 % \hspace{2.3cm}\includegraphics[width=0.8cm, keepaspectratio]{figures/brasao_ctism.png}
 % \hspace{2.3cm}\includegraphics[width=1.5cm, keepaspectratio]{_logosbc.png}
 % \hspace{2.3cm}\includegraphics[width=1.5cm, keepaspectratio]{_logoERRC.png}%
@@ -144,10 +144,10 @@ Disciplina de Robótica Móvel\\
 %----------------------------------------------------------------------------------------
 
 %------------------------------------------------
-\section[Introdução]{Introdução} 
+\section[Introdução]{Frequency Modulation} 
 %------------------------------------------------
 \begin{frame}[allowframebreaks, fragile]
-\frametitle{Introdução}
+\frametitle{Frequency Modulation}
 	\begin{itemize}
 		\item O \textit{Frequency Modulated Continuous Wave Radar} (FMCW), ou Radar de Onda contínua com Modulação de Frequência, é uma técnica alternativa ao Phase-shift measurement;
 		\item Transmissão de uma onda eletromagnética contínua modulada por um sinal triangular periódico que ajusta a frequência da portadora acima e abaixo da frequência média f0;
@@ -157,8 +157,8 @@ Disciplina de Robótica Móvel\\
         \end{equation}
         \item Onde:
         \begin{itemize}
-            \item $a$ = \textit{some constant};
-            \item $t$ = \textit{elapsed time}.
+            \item[] $a$ = \textit{some constant};
+            \item[] $t$ = \textit{elapsed time}.
         \end{itemize}
         \item O sinal é refletido no alvo e chega ao receptor em um tempo $t + T$
         \begin{equation}
@@ -166,9 +166,9 @@ Disciplina de Robótica Móvel\\
         \end{equation}
         \item Onde:
         \begin{itemize}
-            \item $T$ = \textit{round-trip propagation time};
-            \item $d$ = \textit{distance to target};
-            \item $c$ = \textit{speed of light}.
+            \item[] $T$ = \textit{round-trip propagation time};
+            \item[] $d$ = \textit{distance to target};
+            \item[] $c$ = \textit{speed of light}.
         \end{itemize}
         \begin{figure}
             \centering
@@ -190,11 +190,11 @@ Disciplina de Robótica Móvel\\
         \end{equation}
         \item Onde:
         \begin{itemize}
-            \item $c$ = range to target;
-            \item $d$ = speed of light;
-            \item $F_{b}$ = \textit{beat frequency};
-            \item $F_{r}$ = \textit{repetition (modulation) frequency};
-            \item $F_{d}$ = \textit{total FM frequency deviation}.
+            \item[] $c$ = range to target;
+            \item[] $d$ = speed of light;
+            \item[] $F_{b}$ = \textit{beat frequency};
+            \item[] $F_{r}$ = \textit{repetition (modulation) frequency};
+            \item[] $F_{d}$ = \textit{total FM frequency deviation}.
         \end{itemize}
         \item A medida da distância é proporcional a diferença ou \textit{frequency beat};
         \item Os avanços no controle de onda de diodos laser permite essa tecnologia de alcance com radar ser usada com lasers.
@@ -210,9 +210,22 @@ Disciplina de Robótica Móvel\\
 %------------------------------------------------
 
 \begin{frame}[allowframebreaks, fragile]
-\frametitle{Recurrent Neurons and Layers}
+\frametitle{Automotive Collision Avoidance Radar}
 	\begin{itemize}
-		\item Semelhante a uma Feedforward Neural Network, sem conexões apontando para trás;
+		\item É um radar Doppler modificado, com intuito de alertar motoristas para situações perigosas;
+		\item uma antena de microondas miniaturizada, montada no parachoque do veículo envia um sinal de feixe estreito que detecta apenas os objetos diretamente no caminho do veículo
+        \begin{itemize}
+            \item ignorando alvos (placas de trânsito e carros estacionados) em ambas as vias.
+        \end{itemize}
+        \item Quando o sinal do radar é refletido por um alvo estacionário ou em movimento mais lento, ele é detectado pela antena e transmitido a um processador de sinal eletrônico sob o capô.
+        \item O processador de sinal computa constantemente:
+        \begin{itemize}
+            \item Velocidade deo veículo;
+            \item Aceleração;
+            \item Distância do alvo;
+            \item Velocidade relativa.
+        \end{itemize}
+        \item Se algum desses parâmetros requerirem que o motorista tome uma ação ofensiva/corretiva, um \textit{buzzer} e uma luz são ativadas em um painel "especial" do veículo.
 	\end{itemize}
 \end{frame}
 
@@ -222,7 +235,7 @@ Disciplina de Robótica Móvel\\
 %------------------------------------------------
 
 \begin{frame}[allowframebreaks, fragile]
-\frametitle{Recurrent Neurons and Layers}
+\frametitle{Vehicle Detection and Driver Alert System}
 	\begin{itemize}
 		\item Semelhante a uma Feedforward Neural Network, sem conexões apontando para trás;
 	\end{itemize}
@@ -234,7 +247,7 @@ Disciplina de Robótica Móvel\\
 %------------------------------------------------
 
 \begin{frame}[allowframebreaks, fragile]
-\frametitle{Recurrent Neurons and Layers}
+\frametitle{Safety First System Vehicular Obstacle Detection and Warning System}
 	\begin{itemize}
 		\item Semelhante a uma Feedforward Neural Network, sem conexões apontando para trás;
 	\end{itemize}
@@ -246,7 +259,7 @@ Disciplina de Robótica Móvel\\
 %------------------------------------------------
 
 \begin{frame}[allowframebreaks, fragile]
-\frametitle{Recurrent Neurons and Layers}
+\frametitle{Millitech Millimiter Wave Radar}
 	\begin{itemize}
 		\item Semelhante a uma Feedforward Neural Network, sem conexões apontando para trás;
 	\end{itemize}
