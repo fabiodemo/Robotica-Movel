@@ -47,6 +47,7 @@
 \PassOptionsToPackage{useregional}{datetime2}
 \usepackage{xcolor}
 
+
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
@@ -200,7 +201,7 @@ Disciplina de Robótica Móvel\\
         \item Os avanços no controle de onda de diodos laser permite essa tecnologia de alcance com radar ser usada com lasers.
         \item A \textit{frequency-modulation} apresenta vantagens sobre a \textit{phase-shift measurement}, já que não apresenta ambiguidade quando medindo uma única distância;
         \item Entretanto, possui desvantagens associadas com a linearidade e repetibilidade da \textit{frequency ramp}, assim como a coerência do feixe de laser em sistemas ópticos;
-        \item Sendo assim, a maioria dos
+        \item Sendo assim, a maioria dos FMCW disponíveis comercialmente são baseados em radar, enquanto os dispositivos laser são mais comuns no TOF ou no \textit{phase-detection}
 	\end{itemize}
 \end{frame}
 
@@ -225,7 +226,14 @@ Disciplina de Robótica Móvel\\
             \item Distância do alvo;
             \item Velocidade relativa.
         \end{itemize}
-        \item Se algum desses parâmetros requerirem que o motorista tome uma ação ofensiva/corretiva, um \textit{buzzer} e uma luz são ativadas em um painel "especial" do veículo.
+        \item Se algum desses parâmetros necessitem que o motorista tome uma ação ofensiva/corretiva, um \textit{buzzer} e uma luz são ativadas em um painel "especial" do veículo.
+        \begin{figure}
+            \centering
+            \copyrightbox[b]{\includegraphics[scale=0.4]{figures/2_VRSS_specs.png}}%
+            {Fonte: \cite{everett1995sensors}}
+            \caption{Especificações VRSS}
+            \label{fig:curva_de_freq}
+        \end{figure}
 	\end{itemize}
 \end{frame}
 
@@ -237,7 +245,17 @@ Disciplina de Robótica Móvel\\
 \begin{frame}[allowframebreaks, fragile]
 \frametitle{Vehicle Detection and Driver Alert System}
 	\begin{itemize}
-		\item Semelhante a uma Feedforward Neural Network, sem conexões apontando para trás;
+		\item VORAD (\textit{Vehicle Onboard Radar}) Safety Systems, Inc., também desenvolveu um sistema comercial de radar doppler FMCW de ondas milimétricas;
+        \begin{figure}
+            \centering
+            \copyrightbox[b]{\includegraphics[scale=0.35]{figures/3_VORAD.png}}%
+            {Fonte: \cite{everett1995sensors}}
+            \caption{O módulo antena/trasmissor/receptor é montado na frente (ou lateral) do veículo}
+            \label{fig:curva_de_freq}
+        \end{figure}
+		\item O VORAD consegue distinguir até 20 objetos estacionários ou em movimento, dentro de um \textit{range} de 350 pés (106,68m);
+		\item Dois microprocessadores calculam o \textit{range} e a \textit{range-rate} dos dados (radio frequência) e analisam os resultados em conjunto com a velocidade, frenagem e ângulo da direção;
+		\item Esse ssitema também guarda 20 minutos dos dados históricos mais recentes numa memória EEPROM para reconstrução dos fatos após possíveis acidentes.
 	\end{itemize}
 \end{frame}
 
@@ -249,7 +267,24 @@ Disciplina de Robótica Móvel\\
 \begin{frame}[allowframebreaks, fragile]
 \frametitle{Safety First System Vehicular Obstacle Detection and Warning System}
 	\begin{itemize}
-		\item Semelhante a uma Feedforward Neural Network, sem conexões apontando para trás;
+		\item A
+        \begin{figure}
+            \centering
+            \copyrightbox[b]{\includegraphics[scale=0.35]{figures/4_safety_first_system.png}}%
+            {Fonte: \cite{everett1995sensors}}
+            \caption{Safety First System}
+            \label{fig:curva_de_freq}
+        \end{figure}
+
+        \item B
+
+        \begin{figure}
+            \centering
+            \copyrightbox[b]{\includegraphics[scale=0.35]{figures/5_VORAD_specs.png}}%
+            {Fonte: \cite{everett1995sensors}}
+            \caption{O módulo antena/trasmissor/receptor é montado na frente (ou lateral) do veículo}
+            \label{fig:curva_de_freq}
+        \end{figure}
 	\end{itemize}
 \end{frame}
 
@@ -262,6 +297,46 @@ Disciplina de Robótica Móvel\\
 \frametitle{Millitech Millimiter Wave Radar}
 	\begin{itemize}
 		\item Semelhante a uma Feedforward Neural Network, sem conexões apontando para trás;
+        \begin{figure}
+            \centering
+            \copyrightbox[b]{\includegraphics[scale=0.35]{figures/6_militech_wave_radar.png}}%
+            {Fonte: \cite{everett1995sensors}}
+            \caption{O módulo antena/trasmissor/receptor é montado na frente (ou lateral) do veículo}
+            \label{fig:curva_de_freq}
+        \end{figure}
+
+        \item B
+        
+        \begin{figure}
+            \centering
+            \copyrightbox[b]{\includegraphics[scale=0.65]{figures/7_militech_wave_radar_range_scanned_data.png}}%
+            {Fonte: \cite{everett1995sensors}}
+            \caption{Dados obtidos (escaneados) com sensor de 256-pixels}
+            \label{fig:militech_sensor_data}
+        \end{figure}
+
+
+        \item c
+
+        \begin{figure}
+            \centering
+            \copyrightbox[b]{\includegraphics[scale=0.35]{figures/8_militech_wave_radar_industry_sensor.png}}%
+            {Fonte: \cite{everett1995sensors}}
+            \caption{Os sensores de onda milimétricas FMCW são protegidos contra altas temperaturas}
+            \label{fig:militech_sensor_}
+        \end{figure}
+        
+        \item d
+
+
+        \begin{figure}
+            \centering
+            \copyrightbox[b]{\includegraphics[scale=0.35]{figures/9_militech_wave_radar_specs.png}}%
+            {Fonte: \cite{everett1995sensors}}
+            \caption{Especificações do Millitech Millimiter Wave Radar}
+            \label{fig:militech_specs}
+        \end{figure}
+
 	\end{itemize}
 \end{frame}
 
@@ -280,4 +355,4 @@ Disciplina de Robótica Móvel\\
 \titlepage % Print the title page as the first slide
 \end{frame}
 
-\end{document} 
+\end{document}
