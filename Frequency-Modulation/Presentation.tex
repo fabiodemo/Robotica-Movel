@@ -255,7 +255,14 @@ Disciplina de Robótica Móvel\\
         \end{figure}
 		\item O VORAD consegue distinguir até 20 objetos estacionários ou em movimento, dentro de um \textit{range} de 350 pés (106,68m);
 		\item Dois microprocessadores calculam o \textit{range} e a \textit{range-rate} dos dados (radio frequência) e analisam os resultados em conjunto com a velocidade, frenagem e ângulo da direção;
-		\item Esse ssitema também guarda 20 minutos dos dados históricos mais recentes numa memória EEPROM para reconstrução dos fatos após possíveis acidentes.
+		\item Esse sistema também guarda 20 minutos dos dados históricos mais recentes numa memória EEPROM para reconstrução dos fatos após possíveis acidentes.
+        \begin{figure}
+            \centering
+            \copyrightbox[b]{\includegraphics[scale=0.35]{figures/5_VORAD_specs.png}}%
+            {Fonte: \cite{everett1995sensors}}
+            \caption{O módulo antena/trasmissor/receptor é montado na frente (ou lateral) do veículo}
+            \label{fig:curva_de_freq}
+        \end{figure} 
 	\end{itemize}
 \end{frame}
 
@@ -267,24 +274,17 @@ Disciplina de Robótica Móvel\\
 \begin{frame}[allowframebreaks, fragile]
 \frametitle{Safety First System Vehicular Obstacle Detection and Warning System}
 	\begin{itemize}
-		\item A
+		\item Safety Frist Systems, Ltd. e General Microwave desenvolveram uma unidade, que utiliza microondas para alerta de pontos cegos enquanto motoristas estão freando ou trocando de pistas;
+		\item Um protótipo do sistema entregue à Chrysler Corporation, usa antenas de microfita biestáticas;
+        \item Tais antenas eram montadas nos painéis laterais traseiros e no para-choque traseiro de uma minivan e pode detectar objetos parados e em movimento dentro dos padrões de cobertura mostrados na Figura \autoref{fig:safety_first}
         \begin{figure}
             \centering
             \copyrightbox[b]{\includegraphics[scale=0.35]{figures/4_safety_first_system.png}}%
             {Fonte: \cite{everett1995sensors}}
             \caption{Safety First System}
-            \label{fig:curva_de_freq}
+            \label{fig:safety_first}
         \end{figure}
 
-        \item B
-
-        \begin{figure}
-            \centering
-            \copyrightbox[b]{\includegraphics[scale=0.35]{figures/5_VORAD_specs.png}}%
-            {Fonte: \cite{everett1995sensors}}
-            \caption{O módulo antena/trasmissor/receptor é montado na frente (ou lateral) do veículo}
-            \label{fig:curva_de_freq}
-        \end{figure}
 	\end{itemize}
 \end{frame}
 
@@ -296,38 +296,30 @@ Disciplina de Robótica Móvel\\
 \begin{frame}[allowframebreaks, fragile]
 \frametitle{Millitech Millimiter Wave Radar}
 	\begin{itemize}
-		\item Semelhante a uma Feedforward Neural Network, sem conexões apontando para trás;
+		\item Millitech Corporation também desenhou alguns sistemas FMCW de onda milimétrica focadas em \textit{robotic collision avoidance};
+		\item Foram sistemas superiores aos dispositivos infravermelhos sob quaisquer condições climáticas, incluindo neblina, chuva, poeira e areia;
+        \item A Figura \ref{fig:militech} demonstra as imagens escaneadsa e o sistema de aquisição de dados, no qual quatro feixes empilhados verticalmente são mecanicamente escaneados para produzir um quadro de 256 pixels de dados a uma taxa de 5 Hz;
         \begin{figure}
             \centering
             \copyrightbox[b]{\includegraphics[scale=0.35]{figures/6_militech_wave_radar.png}}%
             {Fonte: \cite{everett1995sensors}}
-            \caption{O módulo antena/trasmissor/receptor é montado na frente (ou lateral) do veículo}
-            \label{fig:curva_de_freq}
+            \caption{Sensores empilhados }
+            \label{fig:militech}
         \end{figure}
-
-        \item B
+        
+        \item Cada pixel individual contém 512 \textit{bins} de alcance com 0,5 metros de distância;
+        \item Uso de controle de loop fechado do oscilador para gerar a forma de onda básica do transmissor, produzindo um desempenho estável e de baixo custo que não se degrada com o tempo;
         
         \begin{figure}
             \centering
             \copyrightbox[b]{\includegraphics[scale=0.65]{figures/7_militech_wave_radar_range_scanned_data.png}}%
             {Fonte: \cite{everett1995sensors}}
-            \caption{Dados obtidos (escaneados) com sensor de 256-pixels}
+            \caption{quatro feixes de ondas milimétricas empilhados verticalmente para produzir uma imagem de 4 por 64 pixels em um campo de visão de 12 por 64 graus}
             \label{fig:militech_sensor_data}
         \end{figure}
 
 
-        \item c
-
-        \begin{figure}
-            \centering
-            \copyrightbox[b]{\includegraphics[scale=0.35]{figures/8_militech_wave_radar_industry_sensor.png}}%
-            {Fonte: \cite{everett1995sensors}}
-            \caption{Os sensores de onda milimétricas FMCW são protegidos contra altas temperaturas}
-            \label{fig:militech_sensor_}
-        \end{figure}
-        
-        \item d
-
+        \item A operação na região de ondas milimétricas do espectro de radiofrequência permite um desempenho de maior resolução em uma configuração de pacote menor que pode ser obtida com contrapartes de micro-ondas de frequência mais baixa;
 
         \begin{figure}
             \centering
