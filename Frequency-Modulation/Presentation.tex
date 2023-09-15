@@ -181,7 +181,7 @@ Disciplina de Robótica Móvel\\
         \item O sinal recebido é comparado com o sinal referência obtido diretamente do transmissor;
         \item A curva de frequência recebida será deslocada ao longo do eixo de tempo, por um período igual ao tempo necessário para a onda se propagar e retornar;
         \item Devido ao efeito Doppler, pode ocorrer um deslocamento no eixo de frequência.
-        \item As duas frequências da \ref{fig:curva_de_freq}, quando combinadas em um misturador, produzem uma \textit{beat frequency} $f_{b}$:
+        \item As duas frequências (Figura \ref{fig:curva_de_freq}), quando combinadas em um misturador, produzem uma \textit{beat frequency} $f_{b}$:
         \begin{equation}
             F_{b} = f(t) - f(T + t) = aT
         \end{equation}
@@ -191,8 +191,8 @@ Disciplina de Robótica Móvel\\
         \end{equation}
         \item Onde:
         \begin{itemize}
-            \item[] $c$ = range to target;
-            \item[] $d$ = speed of light;
+            \item[] $d$ = range to target;
+            \item[] $c$ = speed of light;
             \item[] $F_{b}$ = \textit{beat frequency};
             \item[] $F_{r}$ = \textit{repetition (modulation) frequency};
             \item[] $F_{d}$ = \textit{total FM frequency deviation}.
@@ -221,7 +221,7 @@ Disciplina de Robótica Móvel\\
         \item Quando o sinal do radar é refletido por um alvo estacionário ou em movimento mais lento, ele é detectado pela antena e transmitido a um processador de sinal eletrônico sob o capô.
         \item O processador de sinal computa constantemente:
         \begin{itemize}
-            \item Velocidade deo veículo;
+            \item Velocidade do veículo;
             \item Aceleração;
             \item Distância do alvo;
             \item Velocidade relativa.
@@ -298,12 +298,12 @@ Disciplina de Robótica Móvel\\
 	\begin{itemize}
 		\item Millitech Corporation também desenhou alguns sistemas FMCW de onda milimétrica focadas em \textit{robotic collision avoidance};
 		\item Foram sistemas superiores aos dispositivos infravermelhos sob quaisquer condições climáticas, incluindo neblina, chuva, poeira e areia;
-        \item A Figura \ref{fig:militech} demonstra as imagens escaneadsa e o sistema de aquisição de dados, no qual quatro feixes empilhados verticalmente são mecanicamente escaneados para produzir um quadro de 256 pixels de dados a uma taxa de 5 Hz;
+        \item A Figura \ref{fig:militech} mostra sistema de aquisição de dados, no qual quatro feixes empilhados verticalmente são mecanicamente escaneados para produzir um quadro de 256 pixels de dados a uma taxa de 5 Hz;
         \begin{figure}
             \centering
             \copyrightbox[b]{\includegraphics[scale=0.35]{figures/6_militech_wave_radar.png}}%
             {Fonte: \cite{everett1995sensors}}
-            \caption{Sensores empilhados}
+            \caption{Quatro feixes de ondas milimétricas empilhados verticalmente para escanear superfícies \\ e produzir uma imagem de 4 por 64 pixels em um campo de visão de 12 por 64 graus}
             \label{fig:militech}
         \end{figure}
         
@@ -314,7 +314,7 @@ Disciplina de Robótica Móvel\\
             \centering
             \copyrightbox[b]{\includegraphics[scale=0.60]{figures/7_militech_wave_radar_range_scanned_data.png}}%
             {Fonte: \cite{everett1995sensors}}
-            \caption{Quatro feixes de ondas milimétricas empilhados verticalmente para produzir uma imagem de 4 por 64 pixels em um campo de visão de 12 por 64 graus}
+            \caption{Os dados de alcance adquiridos pelo sensor digitalizado de 256 pixels mostram \\ alvos humanos e objetos inanimados}
             \label{fig:militech_sensor_data}
         \end{figure}
 
