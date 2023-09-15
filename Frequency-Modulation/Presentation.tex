@@ -150,8 +150,8 @@ Disciplina de Robótica Móvel\\
 \begin{frame}[allowframebreaks, fragile]
 \frametitle{Frequency Modulation}
 	\begin{itemize}
-		\item O \textit{Frequency Modulated Continuous Wave Radar} (FMCW), ou Radar de Onda contínua com Modulação de Frequência, é uma técnica alternativa ao Phase-shift measurement;
-		\item Transmissão de uma onda eletromagnética contínua modulada por um sinal triangular periódico que ajusta a frequência da portadora acima e abaixo da frequência média f0;
+		\item O \textit{Frequency Modulated Continuous Wave Radar} (Radar de Onda contínua com Modulação de Frequência ou FMCW), é uma técnica alternativa ao \textit{Phase-Shift Measurement};
+		\item Transmissão de uma onda eletromagnética contínua modulada por um sinal triangular periódico que ajusta a frequência da portadora acima e abaixo da frequência média $f_{0}$;
 		\item O transmissor emite um sinal que varia em frequência como uma função linear do tempo;
 		\begin{equation}
             f(t) = f_0 + at
@@ -201,7 +201,7 @@ Disciplina de Robótica Móvel\\
         \item Os avanços no controle de onda de diodos laser permite essa tecnologia de alcance com radar ser usada com lasers.
         \item A \textit{frequency-modulation} apresenta vantagens sobre a \textit{phase-shift measurement}, já que não apresenta ambiguidade quando medindo uma única distância;
         \item Entretanto, possui desvantagens associadas com a linearidade e repetibilidade da \textit{frequency ramp}, assim como a coerência do feixe de laser em sistemas ópticos;
-        \item Sendo assim, a maioria dos FMCW disponíveis comercialmente são baseados em radar, enquanto os dispositivos laser são mais comuns no TOF ou no \textit{phase-detection}
+        \item Sendo assim, a maioria dos FMCW disponíveis comercialmente são baseados em radar, enquanto os dispositivos laser são mais comuns no Time-of-Flight (ToF) ou no \textit{phase-detection}
 	\end{itemize}
 \end{frame}
 
@@ -211,7 +211,7 @@ Disciplina de Robótica Móvel\\
 %------------------------------------------------
 
 \begin{frame}[allowframebreaks, fragile]
-\frametitle{Automotive Collision Avoidance Radar}
+\frametitle{Automotive Collision Avoidance Radar (1993)}
 	\begin{itemize}
 		\item É um radar Doppler modificado, com intuito de alertar motoristas para situações perigosas;
 		\item Uma antena de microondas miniaturizada, montada no parachoque do veículo envia um sinal de feixe estreito que detecta apenas os objetos diretamente no caminho do veículo
@@ -243,9 +243,9 @@ Disciplina de Robótica Móvel\\
 %------------------------------------------------
 
 \begin{frame}[allowframebreaks, fragile]
-\frametitle{Vehicle Detection and Driver Alert System}
+\frametitle{Vehicle Detection and Driver Alert System (1994)}
 	\begin{itemize}
-		\item VORAD (\textit{Vehicle Onboard Radar}) Safety Systems, Inc., também desenvolveu um sistema comercial de radar doppler FMCW de ondas milimétricas;
+		\item VORAD (\textit{Vehicle Onboard Radar}) Safety Systems, Inc., foi um sistema comercial de radar doppler FMCW de ondas milimétricas;
         \begin{figure}
             \centering
             \copyrightbox[b]{\includegraphics[scale=0.35]{figures/3_VORAD.png}}%
@@ -319,8 +319,12 @@ Disciplina de Robótica Móvel\\
         \end{figure}
 
 
-        \item A operação na região de ondas milimétricas do espectro de radiofrequência permite um desempenho de maior resolução em uma configuração de pacote menor que pode ser obtida com contrapartes de micro-ondas de frequência mais baixa;
-
+        \item Operar na região de ondas milimétricas do espectro de radiofrequência, permite um desempenho de maior resolução em uma configuração de pacote menor.
+        \begin{itemize}
+            \item que pode ser obtida com contrapartes de micro-ondas de frequência mais baixa.
+        \end{itemize}
+        
+        \newpage
         \begin{figure}
             \centering
             \copyrightbox[b]{\includegraphics[scale=0.35]{figures/9_militech_wave_radar_specs.png}}%
