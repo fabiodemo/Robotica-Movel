@@ -179,19 +179,50 @@ Disciplina de Robótica Móvel\\
 \end{frame}
 
 
-    \subsection[Introdução]{Aplicações} 
+    \subsection[Aplicações]{Aplicações} 
     \begin{frame}[allowframebreaks, fragile]
     \frametitle{Aplicações}
         \begin{itemize}
-            \item O
+            \item Amplamente empregados em:
+            \begin{itemize}
+                \item Vigilância militar e comercial;
+                \item Aplicações de navegação;
+                \item Detecção de curto alcance (radar de alerta de controle para aeronaves);
+                \item Indicadores de nível de tanques;
+                \item Controles de tráfego;
+                \item Sensores de movimento e detectores de presença
+            \end{itemize}
+            \item As microondas são ideais para detecção de logo alcance, porque a resolução é geralmente boa, a atenuação dos feixes na atmosfera é minima;
+            \begin{itemize}
+                \item Operando em distâncias de alguns metros a algumas centenas de
+                metros.
+            \end{itemize}
+            \item Equipamentos de transmissão, recepção e processamento da forma de onda estão amplamente disponíveis.
+            \newpage
+            \item As aplicações mais modernas, de acordo com \cite{everett1995sensors}, são:
         \end{itemize}
     \end{frame}
 
-    \subsection[Introdução]{Fatores de Performance} 
+    \subsection[Fatores de Performance]{Fatores de Performance} 
     \begin{frame}[allowframebreaks, fragile]
     \frametitle{Fatores de Performance}
         \begin{itemize}
-            \item O
+            \item Aumentar o diâmetro do refletor resulta em uma melhoria na capacidade de alcance devido ao feixe de saída estar focalizado, e quanto mais larga a área da antena, maior a superfície de recepção/transmissão.
+            \begin{itemize}
+                \item Porém isso pode apresentar desvantagens em manipular um sistema mecânico com alta carga inercial.
+            \end{itemize}
+            		
+		\begin{figure}
+            \centering
+            \copyrightbox[b]{\includegraphics[scale=0.7]{figures/2_MR_commom_configuration.png}}%
+            {Fonte: \cite{everett1995sensors}}
+            \caption{Configurações comuns das antenas de microondas incluem: (A) prato refletor com ponto focal. (B) Antena tipo corneta. (C) matrizes bidimensionais de microfita}
+            \label{fig:curva_de_freq}
+        \end{figure}
+        
+        \item Muitas aplicações comerciais de curto alcance usam a antena tipo corneta para não lidar com os problemas citados;
+        \item As configurações de antenas \textit{phased array} (Figura 9-9C) apresentam um arranjo de múltiplas antenas pequenas separadas por distâncias de alguns comprimentos de onda;
+        \item 
         \end{itemize}
     \end{frame}
 
@@ -210,7 +241,30 @@ Disciplina de Robótica Móvel\\
     \begin{frame}[allowframebreaks, fragile]
     \frametitle{Aplicações}
         \begin{itemize}
-            \item O
+            \item Os usos mais comuns incluem:
+            \begin{itemize}
+                \item Sensoriamento ambiental;
+                \item Radar de imagem com alta resolução;
+                \item Espectroscopia;
+                \item Equipamentos de telêmetro;
+                \item Frenagem de automóveis.
+            \end{itemize}
+            \item Embora, o uso mais comum seja rastreamento e designação de alvos com fins militares \cite*{everett1995sensors}.
+            \item A estreita largura de feixe das transmissões de ondas milimétricas é altamente
+            imune a problemas de reflexão do sol.
+            \begin{itemize}
+                \item Radares de busca de microondas de longo alcance
+                e feixe largo para aquisição inicial e depois mudando para um radar de rastreamento
+                milimétrico para controle do sistema de armas
+            \end{itemize}
+            \item Sistemas de ondas milimétricas de curto alcance e baixa potência parecem ser
+            adequados para evitar colisões e necessidades de navegação de um robô móvel
+            externos.
+            \item a capacidade de usar antenas menores é uma característica
+            dominante que influencia a seleção de ondas milimétricas em microondas. 
+            \begin{itemize}
+                \item As três plataformas mais diretamente afetadas: satélites, mísseis e mini-RPVs (\textit{Remotely Piloted Vehicles}).
+            \end{itemize}
         \end{itemize}
     \end{frame}
 
