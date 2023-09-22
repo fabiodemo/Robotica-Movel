@@ -290,12 +290,13 @@ Disciplina de Robótica Móvel\\
             \begin{itemize}
                 \item As três plataformas mais diretamente afetadas: satélites, mísseis e mini-RPVs (\textit{Remotely Piloted Vehicles}).
             \end{itemize}
+            \item Nas Figuras \ref{fig:MMW_people_identification} e \ref{fig:MMW_toyota_vehicle_detection} podemos observar dos exemplos práticos do uso do Millimeter-Wave Radar.
             \newpage
             \begin{figure}
                 \centering
-                \copyrightbox[b]{\includegraphics[scale=0.05]{figures/3_people_identification.png}}%
+                \copyrightbox[b]{\includegraphics[scale=0.047]{figures/3_people_identification.png}}%
                 {Fonte: \cite{huang2023application}}
-                \caption{}
+                \caption{Sistema de identificação de objectos utilizando dados de nuvens de pontos gerados por um sensor de radar de ondas milimétricas.}
                 \label{fig:MMW_people_identification}
             \end{figure}
 
@@ -304,7 +305,7 @@ Disciplina de Robótica Móvel\\
                 \centering
                 \copyrightbox[b]{\includegraphics[scale=0.4]{figures/4_toyota_detection.png}}%
                 {Fonte: \cite{toyota_2006}}
-                \caption{}
+                \caption{O sistema de segurança de pré-colisão detecta veículos e obstáculos na estrada.}
                 \label{fig:MMW_toyota_vehicle_detection}
             \end{figure}
         \end{itemize}
@@ -314,7 +315,49 @@ Disciplina de Robótica Móvel\\
     \begin{frame}[allowframebreaks, fragile]
     \frametitle{Millimeter-Wave Radar - Fatores de Performance}
         \begin{itemize}
-            \item O
+            \item Os principais pontos sobre os fatores de desempenho de um radar Millimeter-Wave, de acordo com \cite{everett1995sensors}, são:
+            \begin{itemize}
+                \item Atenuação atmosférica:
+                \begin{itemize}
+                    \item Afeta a propagação do sinal de radar;
+                    \item Frequências de ondas milimétricas são suscetíveis à absorção e dispersão devido à umidade e gases na atmosfera;
+                    \item Limitar o alcance do sensor normalmente resolve esse problema, Para as aplicações robóticas previstas (prevenção de colisões, navegação,
+                    comunicações).
+                \end{itemize}
+                \item Radar Cross-Section (RCS):
+                \begin{itemize}
+                    \item Representa a capacidade de um alvo de refletir o sinal de radar de volta para o transmissor;
+                    \item Importante para detectabilidade e identificação de alvos.
+                \end{itemize}
+                \item Reflexões de Múltiplos Caminhos (\textit{Multipath Reflections}):
+                \begin{itemize}
+                    \item Ocorre quando o sinal do radar atinge o alvo e sofre reflexões de diferentes superfícies antes de retornar ao receptor;
+                    \item Pode contribuir seriamente para o nível de ruído, às vezes é difícil ou impossível reduzir a relação sinal-ruído;
+                    \item Pode causar distorção na medição da distância e na identificação do alvo;
+                    \item A melhor maneira de reduzir o retroespalhamento é limitar o tamanho da célula
+                    de resolução (ou seja, a largura do feixe).
+                \end{itemize}
+
+                \begin{figure}
+                    \centering
+                    \copyrightbox[b]{\includegraphics[scale=0.8]{figures/5_backscatter.png}}%
+                    {Fonte: \cite{everett1995sensors}}
+                    \caption{A boa retrodifusão em ângulos de elevação baixos pode ser um problema em aplicações de radar robótico anticolisão.}
+                    \label{fig:MMW_backscatter}
+                \end{figure}
+
+                \item Temperatura:
+                \begin{itemize}
+                    \item Influencia a velocidade das moléculas no ar, afetando a propagação do sinal;
+                    \item Mudanças de temperatura podem impactar a precisão das medições.
+                \end{itemize}
+                \item Geometria do Feixe (\textit{Beam Geometry}):
+                \begin{itemize}
+                    \item Refere-se à forma e direção do feixe de radar;
+                    \item Ajustes na geometria do feixe podem afetar a resolução e a detecção de alvos em diferentes direções;
+                    \item Usar feixes estreitos significaria ter um maior alcance, maior resolução angular, redução de ruído e interferência, retornos de lóbulo lateral minimizados, menos problemas de multipercurso e menos chances de detecção e interferência.
+                \end{itemize}
+            \end{itemize} 
         \end{itemize}
     \end{frame}
 
@@ -339,7 +382,7 @@ Disciplina de Robótica Móvel\\
 
         \begin{figure}
             \centering
-            \copyrightbox[b]{\includegraphics[scale=0.25]{figures/7_tc_microwave.png}}%
+            \copyrightbox[b]{\includegraphics[scale=0.25]{figures/6_tc_microwave.png}}%
             {Fonte: \cite{cardillo_2023}}
             \label{fig:tc_microwave}
         \end{figure}
