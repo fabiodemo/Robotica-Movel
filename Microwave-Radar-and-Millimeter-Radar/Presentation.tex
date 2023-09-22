@@ -150,9 +150,9 @@ Disciplina de Robótica Móvel\\
 \begin{frame}[allowframebreaks, fragile]
 \frametitle{Microwave Radar}
 	\begin{itemize}
-		\item A porção do espectro eletromagnético considerada uma frequência útil para radares práticos é entre 3 e 100 GHz;
+		\item A porção do espectro eletromagnético considerada uma frequência útil para radares práticos é entre 3 e 100 GHz \cite{everett1995sensors};
 		\item A maioria dos radares convencionais operam nas bandas L, S C ou X;
-		\item A lista de letras (Figura) foi adotada como medida de segurança durante a Segunda Guerra Mundial, e foi mantida por conveniência;
+		\item A Figura \ref{fig:curva_de_freq}, demonstra uma referência adotada como medida de segurança durante a Segunda Guerra Mundial, e foi mantida por conveniência;
 		
 		\begin{figure}
             \centering
@@ -163,9 +163,9 @@ Disciplina de Robótica Móvel\\
         \end{figure}
 
     \newpage
-    \item O radar utiliza radiação de micro-ondas para detetar o alcance, a distância e outras características dos dispositivos de deteção, além de aplicações móveis de banda larga \cite{Agarwal_2021}.
-    \item O cálculo de distância é obtido por métodos TOF, CW phase Detection ou CW Frequency Modulation;
-    \item \textit{Pulsed Systems} pode detectar alvos em distâncias de até centenas de quilômetros, dependendo na medida do tempo de propagação de uma onda propagada na velocidade da luz.
+    \item O radar utiliza radiação de micro-ondas para detectar o alcance, a distância e outras características dos dispositivos de deteção, além de aplicações móveis de banda larga \cite{Agarwal_2021}.
+    \item O cálculo de distância é obtido por métodos TOF, CW Phase Detection ou CW Frequency Modulation;
+    \item \textit{Pulsed Systems} podem detectar alvos em distâncias de até centenas de quilômetros, dependendo na medida do tempo de propagação de uma onda propagada na velocidade da luz;
     \item \textit{Near-field measurements} (menos de 100 km) são mais difíceis para esse tipo de sistema;
     \begin{itemize}
         \item Pois sinais nítidos de curta duração são difíceis de se gerar para distâncias inferiores a um pé.
@@ -219,7 +219,7 @@ Disciplina de Robótica Móvel\\
             \label{fig:MR_commom_config}
         \end{figure}
         
-            \item Muitas aplicações comerciais de curto alcance usam a antena tipo corneta para não lidar com os problemas citados;
+            \item Muitas aplicações comerciais de curto alcance usam a antena tipo corneta para não lidar com as desvantagens citadas anteriormente;
             \item As configurações de antenas \textit{phased array} (Figura 9-9C) apresentam um arranjo de múltiplas antenas pequenas separadas por distâncias de alguns comprimentos de onda;
             \item Um dos fatores que atrapalha a performance significativamente é a atenuação atmosférica;
             \begin{itemize}
@@ -239,7 +239,7 @@ Disciplina de Robótica Móvel\\
 	\begin{itemize}
 		\item As ondas milimétricas constituem aquela porção do espectro eletromagnético com comprimentos de 30 a 300 GHz \cite{everett1995sensors};
 		\begin{itemize}
-            \item Entre micro-ondas e electro-ótico.
+            \item Entre micro-ondas e eletro-óptico.
         \end{itemize} 
 		\item Têm capacidade de alcance significativamente menor do que os sistemas que usam micro-ondas;
 		\begin{itemize}
@@ -252,8 +252,8 @@ Disciplina de Robótica Móvel\\
             altas, permitindo uma melhor detecção de pequenos objetos, como postes, fios, árvores e sinais
             de trânsito
         \end{itemize}
-        \item As altas frequências Doppler proporcionam boa detecção de alvos em movimento lento. Os baixos requisitos de energia
-        de comprimentos de onda mais curtos são atraentes para aplicações robóticas. 
+        \item As altas frequências Doppler proporcionam boa detecção de alvos em movimento lento. 
+        \item Os baixos requisitos de energia ao usar um comprimentos de onda mais curtos são atraentes para aplicações robóticas. 
         \item Além disso, comprimentos de onda mais curtos traduzem-se em componentes menores, o que leva a tamanho e
         peso reduzidos; 
         \item As desvantagens são que a atenuação atmosférica aumenta e os tamanhos
@@ -285,7 +285,7 @@ Disciplina de Robótica Móvel\\
             \item Sistemas de ondas milimétricas de curto alcance e baixa potência parecem ser
             adequados para evitar colisões e necessidades de navegação de um robô móvel
             externos.
-            \item a capacidade de usar antenas menores é uma característica
+            \item A capacidade de usar antenas menores é uma característica
             dominante que influencia a seleção de ondas milimétricas em micro-ondas. 
             \begin{itemize}
                 \item As três plataformas mais diretamente afetadas: satélites, mísseis e mini-RPVs (\textit{Remotely Piloted Vehicles}).
