@@ -200,17 +200,7 @@ Disciplina de Robótica Móvel\\
             \end{itemize}
             \item Equipamentos de transmissão, recepção e processamento da forma de onda estão amplamente disponíveis.
             \newpage
-            \item De acordo com \cite{Agarwal_2021}, a radiação de micro-ondas é produzida por dispositivos de radar, antenas parabólicas, fornos de micro-ondas, entre outros;
-            \begin{itemize}
-                \item Sendo que essa pode afetar os seres humanos de formas diferentes, um exemplo pode ser o uso prolongado de telefone celular, conforme a Figura abaixo.
-                \begin{figure}
-                    \centering
-                    \copyrightbox[b]{\includegraphics[scale=0.45]{figures/2_Microwave-radiation-effect-after-phone-call.jpg}}%
-                    {Fonte: \cite{Agarwal_2021}}
-                    % \caption{afetadas}
-                    \label{fig:radiation}
-                \end{figure}
-            \end{itemize}
+            \item De acordo com \cite{Agarwal_2021}, a radiação de micro-ondas é produzida por dispositivos de radar, antenas parabólicas, entre outros;
         \end{itemize}
     \end{frame}
 
@@ -225,18 +215,21 @@ Disciplina de Robótica Móvel\\
             		
 		\begin{figure}
             \centering
-            \copyrightbox[b]{\includegraphics[scale=0.7]{figures/3_MR_commom_configuration.png}}%
+            \copyrightbox[b]{\includegraphics[scale=0.7]{figures/4_MR_commom_configuration.png}}%
             {Fonte: \cite{everett1995sensors}}
             \caption{Configurações comuns das antenas de micro-ondas incluem: (A) prato refletor com ponto focal. (B) Antena tipo corneta. (C) matrizes bidimensionais de microfita}
             \label{fig:curva_de_freq}
         \end{figure}
         
-        \item Muitas aplicações comerciais de curto alcance usam a antena tipo corneta para não lidar com os problemas citados;
-        \item As configurações de antenas \textit{phased array} (Figura 9-9C) apresentam um arranjo de múltiplas antenas pequenas separadas por distâncias de alguns comprimentos de onda;
-        \item Um dos fatores que atrapalha a performance significativamente é a atenuação atmosférica;
-        \begin{itemize}
-            \item 
-        \end{itemize}
+            \item Muitas aplicações comerciais de curto alcance usam a antena tipo corneta para não lidar com os problemas citados;
+            \item As configurações de antenas \textit{phased array} (Figura 9-9C) apresentam um arranjo de múltiplas antenas pequenas separadas por distâncias de alguns comprimentos de onda;
+            \item Um dos fatores que atrapalha a performance significativamente é a atenuação atmosférica;
+            \begin{itemize}
+                \item Chuva e neve podem causar atenuação significativa em sinais acima de 2 GHz;
+                \item Interferência multipercurso do solo; 
+                \item Refletividade e diretividade da superfície alvo;
+                \item Cobertura natural, como neve ou folhagem.
+            \end{itemize}
         \end{itemize}
     \end{frame}
 
@@ -290,6 +283,34 @@ Disciplina de Robótica Móvel\\
         \end{itemize}
     \end{frame}
 
+%------------------------------------------------
+\section[Conclusão]{Conclusão} 
+%------------------------------------------------
+\begin{frame}[allowframebreaks, fragile]
+\frametitle{Conclusão}
+	\begin{itemize}
+		\item O sensoriamento baseado em radares de micro-ondas e ondas milimétricas é um tópico de pesquisa importante \cite{cardillo_2023};
+        \item Considerando esses ambos radares, os modos de operação e as tecnologias mais populares são:
+        \begin{itemize}
+            \item Ondas contínuas moduladas em frequência (FMCW); 
+            \item Chaveamento por mudança de frequência (FSK), 
+            \item Interferometria; 
+            \item Doppler;
+            \item Banda ultralarga (UWB); 
+            \item Formação de feixe digital/RF;
+            \item Múltiplas entradas e múltiplas saídas (MIMO);
+            \item Radar de abertura sintética (SAR).
+        \end{itemize}
+
+        \begin{figure}
+            \centering
+            \copyrightbox[b]{\includegraphics[scale=0.3]{figures/5_tc_microwave.png}}%
+            {Fonte: \cite{cardillo_2023}}
+            \label{fig:tc_microwave}
+        \end{figure}
+
+	\end{itemize}
+\end{frame}
 
 %------------------------------------------------
 %\section*{Referências}
