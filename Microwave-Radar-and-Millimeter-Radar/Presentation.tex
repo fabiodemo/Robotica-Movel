@@ -189,8 +189,9 @@ Disciplina de Robótica Móvel\\
                 \item Aplicações de navegação;
                 \item Detecção de curto alcance (radar de alerta de controle para aeronaves);
                 \item Indicadores de nível de tanques;
-                \item Controles de tráfego;
-                \item Sensores de movimento e detectores de presença
+                \item Controles de tráfego e de velocidade de veículos;
+                \item Sensores de movimento e detectores de presença;
+                \item Forno micro-ondas.
             \end{itemize}
             \item As microondas são ideais para detecção de logo alcance, porque a resolução é geralmente boa, a atenuação dos feixes na atmosfera é minima;
             \begin{itemize}
@@ -199,7 +200,17 @@ Disciplina de Robótica Móvel\\
             \end{itemize}
             \item Equipamentos de transmissão, recepção e processamento da forma de onda estão amplamente disponíveis.
             \newpage
-            \item As aplicações mais modernas, de acordo com \cite{everett1995sensors}, são:
+            \item De acordo com \cite{Agarwal_2021}, a radiação de micro-ondas é produzida por dispositivos de radar, antenas parabólicas, fornos de micro-ondas, entre outros;
+            \begin{itemize}
+                \item Sendo que essa pode afetar os seres humanos de formas diferentes, um exemplo pode ser o uso prolongado de telefone celular, conforme a Figura abaixo.
+                \begin{figure}
+                    \centering
+                    \copyrightbox[b]{\includegraphics[scale=0.45]{figures/2_Microwave-radiation-effect-after-phone-call.jpg}}%
+                    {Fonte: \cite{Agarwal_2021}}
+                    % \caption{afetadas}
+                    \label{fig:radiation}
+                \end{figure}
+            \end{itemize}
         \end{itemize}
     \end{frame}
 
@@ -214,15 +225,18 @@ Disciplina de Robótica Móvel\\
             		
 		\begin{figure}
             \centering
-            \copyrightbox[b]{\includegraphics[scale=0.7]{figures/2_MR_commom_configuration.png}}%
+            \copyrightbox[b]{\includegraphics[scale=0.7]{figures/3_MR_commom_configuration.png}}%
             {Fonte: \cite{everett1995sensors}}
-            \caption{Configurações comuns das antenas de microondas incluem: (A) prato refletor com ponto focal. (B) Antena tipo corneta. (C) matrizes bidimensionais de microfita}
+            \caption{Configurações comuns das antenas de micro-ondas incluem: (A) prato refletor com ponto focal. (B) Antena tipo corneta. (C) matrizes bidimensionais de microfita}
             \label{fig:curva_de_freq}
         \end{figure}
         
         \item Muitas aplicações comerciais de curto alcance usam a antena tipo corneta para não lidar com os problemas citados;
         \item As configurações de antenas \textit{phased array} (Figura 9-9C) apresentam um arranjo de múltiplas antenas pequenas separadas por distâncias de alguns comprimentos de onda;
-        \item 
+        \item Um dos fatores que atrapalha a performance significativamente é a atenuação atmosférica;
+        \begin{itemize}
+            \item 
+        \end{itemize}
         \end{itemize}
     \end{frame}
 
@@ -249,7 +263,7 @@ Disciplina de Robótica Móvel\\
                 \item Equipamentos de telêmetro;
                 \item Frenagem de automóveis.
             \end{itemize}
-            \item Embora, o uso mais comum seja rastreamento e designação de alvos com fins militares \cite*{everett1995sensors}.
+            \item Embora, o uso mais comum seja rastreamento e designação de alvos com fins militares \cite{everett1995sensors}.
             \item A estreita largura de feixe das transmissões de ondas milimétricas é altamente
             imune a problemas de reflexão do sol.
             \begin{itemize}
