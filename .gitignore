@@ -13,8 +13,4 @@
 *.gz
 *.fdb_latexmk
 *.vrb
-Recurrent_Neural_Network/Presentation.aux
-Recurrent_Neural_Network/Presentation.fls
-Reinforcement_Learning/Presentation.fls
-Reinforcement_Learning/Presentation.aux
 *.csv
