@@ -205,7 +205,7 @@ Disciplina de Robótica Móvel\\
                 \copyrightbox[b]{\includegraphics[scale=0.32]{figures/2_Hall-Effect-Proximity-Sensors-02.jpg}}%
                 {Fonte: \cite{fenghalleffect}}
                 \caption{\textit{Hall Effect Sensor}, onde um ímã é colocado próximo a esse semicondutor fino, \\ ele interrompe o fluxo de corrente desviando os portadores de carga no semicondutor.}
-                \label{fig:2:hall_effect_switch}
+                \label{fig:2_hall_effect_switch}
             \end{figure}
 		\end{itemize}
 		\item Magnetic Reed Switches:
@@ -230,7 +230,35 @@ Disciplina de Robótica Móvel\\
 \begin{frame}[allowframebreaks, fragile]
 \frametitle{Inductive Proximity Sensors}
 	\begin{itemize}
-		\item As
+		\item Em 1993, eram os mais utilizados em aplicações industriais, para detecção de metais ferrosos e não-ferrosos \cite{everett1995sensors};
+		\item Geram um campo eletromagnético ocilatório (100Khz até 1 MHz);
+		\begin{figure}
+			\centering
+			\copyrightbox[b]{\includegraphics[scale=0.6]{figures/3_diagram_proximity_sensor.png}}%
+			{Fonte: \cite{everett1995sensors}}
+			\caption{Diagrama do \textit{proximity sensor} tipo ECKO e o circuito de oscilador equivalente.}
+			\label{fig:3_diagram_proximity_sensor}
+		\end{figure}
+		\newpage
+		\item O comparador de limite alterna de um estado desligado para um estado ligado.
+		\begin{figure}
+			\centering
+			\copyrightbox[b]{\includegraphics[scale=0.6]{figures/4_inductive_sensor.png}}%
+			{Fonte: \cite{everett1995sensors}}
+			\caption{Uma pequena diferença entre os níveis de disparo e liberação (histerese) elimina a instabilidade da saída à medida que o alvo entra e sai do alcance.}
+			\label{fig:4_inductive_sensor}
+		\end{figure}
+		\item Um exemplo de uso envolve um grande manipulador industrial que limpa os cascos externos de navios em doca seca com abrasivo de aço. 
+		\begin{itemize}
+			\item Três sensores indutivos analógicos são usados para detectar a presença da superfície do casco de aço.
+		\end{itemize}
+		\begin{figure}
+			\centering
+			\copyrightbox[b]{\includegraphics[scale=0.45]{figures/5_robotic_shot_blasting_device_ship.png}}%
+			{Fonte: \cite{everett1995sensors}}
+			\caption{esse dispositivo robótico de jateamento com granalha de aço usa sensores de proximidade para manter o efetor de ciclo fechado em contato vedado com o casco do navio.}
+			\label{fig:5_robotic_shot_blasting_device_ship}
+		\end{figure}
 	\end{itemize}
 \end{frame}
 
