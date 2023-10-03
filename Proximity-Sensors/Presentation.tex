@@ -148,7 +148,7 @@ Disciplina de Robótica Móvel\\
 \section[Proximity Sensors]{Proximity Sensors} 
 %------------------------------------------------
 \begin{frame}[allowframebreaks, fragile]
-\frametitle{Microwave Radar}
+\frametitle{Proximity Sensors}
 	\begin{itemize}
 		\item Usados para determina a presença de objetos próximos;
 		\item Desenvolvidos para alcance de detecção além do acessível por contato direto ou sensores táteis;
@@ -171,7 +171,55 @@ Disciplina de Robótica Móvel\\
 \begin{frame}[allowframebreaks, fragile]
 \frametitle{Magnetic Proximity Sensors}
 	\begin{itemize}
-		\item As
+		\item Aplicações \cite{baumermagnetic}:
+		\begin{itemize}
+			\item Monitoramento das posições finais dos estabilizadores telescópicos;
+			\item Limitação do curso em cilindros hidráulicos;
+			\item Detecção do nível de líquido utilizando um imã transportado por um flutuador.
+		\end{itemize}
+		\item Magnetic Reed Switches:
+		\begin{itemize}
+			\item A forma mais simples de sensor de proximidade magnética;
+			\item Possuem vantagens, mas podem ser lentos, propensos a falhas e sensíveis à vibração. 
+			\item Reagem apenas a ímãs magnetizados axialmente, requerindo uma elevada força magnética.
+			\begin{figure}
+                \centering
+                \copyrightbox[b]{\includegraphics[scale=0.5]{figures/1_reed_switch.png}}%
+                {Fonte: \cite{everett1995sensors}}
+                \caption{\textit{Reed Switch}, é hermeticamente selado, demonstrado com seus contatos abertos.\\ O tubo é preenchido por um gás inerte para evitar a oxidação dos contatos.}
+                \label{fig:1_reed_switch}
+            \end{figure}
+		\newpage
+		\end{itemize}
+		\item Hall Effect Sensors:
+		\begin{itemize}
+			\item Detectam a presença utilizando a magnitude do campo magnético criado por um objeto;
+			\item O princípio do efeito Hall é utilizado para detetar a presença e a intensidade de um campo magnético;
+			\item Possuem um alcance de cerca de 0-40mm \cite{fenghalleffect}
+			\begin{itemize}
+				\item Dependendo diretamente da densidade do fluxo magnético do objeto.
+				\item Os ímãs mais fortes têm mais influência e podem acionar o sensor a uma distância relativamente maior.
+			\end{itemize}
+			\begin{figure}
+                \centering
+                \copyrightbox[b]{\includegraphics[scale=0.32]{figures/2_Hall-Effect-Proximity-Sensors-02.jpg}}%
+                {Fonte: \cite{fenghalleffect}}
+                \caption{\textit{Hall Effect Sensor}, onde um ímã é colocado próximo a esse semicondutor fino, \\ ele interrompe o fluxo de corrente desviando os portadores de carga no semicondutor.}
+                \label{fig:2:hall_effect_switch}
+            \end{figure}
+		\end{itemize}
+		\item Magnetic Reed Switches:
+		\begin{itemize}
+			\item O elemento magnético-resistivo é feito de um material especial que reage apenas a campos magnéticos;
+			\begin{itemize}
+				\item Por exemplo um ímã permanente
+			\end{itemize} 
+			\item Consegue detectar mesmo campos magnéticos muito fracos;
+			\begin{itemize}
+				\item O elemento magnético-resistivo é aproximadamente dez vezes mais sensível do que um elemento Hall, o que permite uma grande distância de comutação.
+			\end{itemize}
+			\item Os interruptores de proximidade magnéticos são omnipolares, o que significa que tanto o pólo norte como o pólo sul estão a ser detectados.
+		\end{itemize}
 	\end{itemize}
 \end{frame}
 
