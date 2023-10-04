@@ -317,7 +317,36 @@ Disciplina de Robótica Móvel\\
 \begin{frame}[allowframebreaks, fragile]
 \frametitle{Microwave Proximity Sensors}
 	\begin{itemize}
-		\item O 
+		\item Esses sensores operam a distâncias entre 1m e 45,72m, ou até mais \cite{everett1995sensors}.
+		\begin{itemize}
+			\item Operam de forma similar aos sensores ultrasônicos.
+		\end{itemize}
+		\item Quando a presença de um alvo reflete energia suficiente, da antena transmissora de volta ao recepetor, a saída muda de estado.
+		\begin{itemize}
+			\item Indicando que um objeto está presente no campo de visão.
+		\end{itemize} 
+		\item Uma configuração alternativa emprega uma única antena transmissora/receptora que monitora o efeito Doppler induzido por um alvo em movimento.
+		\begin{itemize}
+			\item Detectando movimentação relativa (diferente do detector de presença).
+		\end{itemize}
+		\item Algumas das vantagens do sensor de microondas, são respectivamente \cite{electricitymagnetism2023microwave}:
+		\begin{itemize}
+			\item Precisão, até mesmo em ambientes com poeira, terra ou umidade;
+			\item Sensoriamentoe sem contato físico;
+			\item Independente de material, podendo detectar materiais de metal, plástico e até vidro;
+			\item Maiores distâncias do que outros tipos de sensores;
+			\item Podem atravessar os materiais, permitindo detectar objetos ocultos ou atrás de outros objetos
+		\end{itemize}
+		
+		\newpage
+		\begin{figure}
+			\centering
+			\copyrightbox[b]{\includegraphics[scale=0.4]{figures/7_microwave_presence_sensor.png}}%
+			{Fonte: \cite{hayward2022capaciflector}}
+			\caption{O sensor de presença de microondas, requere uma antena transmissora e outra receptora separadas.}
+			\label{fig:7_microwave_presence_sensor}
+		\end{figure}
+		\item Podem ser empregados na indústria automotiva, automação industrial e sistemas de segurança.
 	\end{itemize}
 \end{frame}
 
