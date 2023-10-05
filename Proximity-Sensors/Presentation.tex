@@ -351,93 +351,132 @@ Disciplina de Robótica Móvel\\
 \end{frame}
 
 %------------------------------------------------
-\section[Optical Proximity Sensors]{Optical Proximity Sensors} 
+\section[Exemplos de Sensores Comuns]{Exemplos de Sensores Comuns} 
 %------------------------------------------------
-\begin{frame}[allowframebreaks, fragile]
-\frametitle{Optical Proximity Sensors}
-	\begin{itemize}
-		\item São comumente encontrados em aplicações robóticas como:
-		\begin{itemize}
-			\item Detecção de piso;
-			\item Referenciamento na navegação;
-			\item Prevenção de colisão.
-		\end{itemize}
-		\item A energia modulada próximo do infravermelho é tipicamente empregada para reduzir os efeitos da iluminação ambiente, alcançando assim a relação sinal-ruído necessária para uma operação confiável \cite{everett1995sensors}.
-		\item Sua performance depende de:
-		\begin{itemize}
-			\item Características físicas do material o qual se deseja estimar proximidade (tamanho, formato, refletividade e o tipo de material);
-			\item Design do sensor;
-			\item Velocidade do emissor ou do alvo;
-			\item Qualidade e quantidade de energia erradiada/recebida.
-		\end{itemize}
-		
-		\newpage
-		\item \textbf{\textit{Opposed Mode}}:
-		\begin{itemize}
-			\item Também conhecido como \textit{eletric eye};
-			\item É o mais simples dos sensores ópticos, onde o transmissor emite um feixe de luz (geralmente LED) focado em um receptor fotosensível;
-			\item Qualquer objeto passante interrompe o feixe, interrompendo o circuito.
-			\item Foi utilizado para contagem de peças, abertura automática de portas e sistemas de segurança;
-			\item Em sistemas de segurança, foi usado em aplicações com mais de 30m de distância.
-		\end{itemize}
-		\begin{figure}
-			\centering
-			\copyrightbox[b]{\includegraphics[scale=0.7]{figures/8_optical_sensor_opposed_mode.png}}%
-			{Fonte: \cite{everett1995sensors}}
-			\caption{\textit{Opposed Mode sensor configuration} depende da passagem de um objeto entre o transmissor e receptor para interomper o feixe.}
-			\label{fig:8_optical_sensor_opposed_mode}
-		\end{figure}
-
-		\newpage
-		\item \textbf{\textit{Retroreflective Mode}}:
-		\textit{Opposed Mode}:
-		\begin{itemize}
-			\item Nesta configuração, usa-se um espelho para refletir o feixe de volta ao receptor;
-			\item Refletores de cubo de canto eventualmente substituiram os espelhos, devido a precisão.
+\begin{frame}[fragile]
+	\frametitle{Exemplo de Sensores Comuns}
+	\begin{enumerate}
+		\item \textbf{Magnetic Proximity Sensor}:
 			\begin{itemize}
-				\item Três superfícies refletivas perpendiculares e uma face hipotenusa;
-				\item A luz entra através da face hipotenusa e é refletida por cada superfície até voltar na direção de sua fonte.
+				\item Modelo: \textbf{KY-003 Hall Magnetic Sensor Module}
 			\end{itemize}
-			\item Em cenários de automação industrial, detecta-se proximidade quando o objeto interromper o feixe.
+		\item \textbf{Inductive Proximity Sensor}:
 			\begin{itemize}
-				\item Porém, em algumas aplicações pode-se colocar o \textit{retroreflector} no item/objeto a ser detectado.
-			\end{itemize} 
-		\end{itemize}
-		\begin{figure}
-			\centering
-			\copyrightbox[b]{\includegraphics[scale=0.7]{figures/9_optical_sensor_retroreflective_mode.png}}%
-			{Fonte: \cite{everett1995sensors}}
-			\caption{\textit{Corner-cube retroreflectors} são empregados para aumentar o alcance efeitvo e simplificar o alinhamento dos feixes.}
-			\label{fig:9_optical_sensor_retroreflective_mode}
-		\end{figure}
-
-		\newpage
-		\item \textbf{\textit{Diffuse-mode}}:
-		\begin{itemize}
-			\item 
-		\end{itemize}
-		\begin{figure}
-			\centering
-			\copyrightbox[b]{\includegraphics[scale=0.7]{figures/10_optical_sensor_diffuse_mode.png}}%
-			{Fonte: \cite{everett1995sensors}}
-			\caption{\textit{Diffuse-mode proximity sensors} dependem da energia refletida diretamente da superficie do alvo.}
-			\label{fig:10_optical_sensor_diffuse_mode}
-		\end{figure}
-
-		\newpage
-		\item \textbf{\textit{Convergent Mode}}:
-		\begin{itemize}
-			\item 
-		\end{itemize}
-		\begin{figure}
-			\centering
-			\copyrightbox[b]{\includegraphics[scale=0.7]{figures/11_optical_sensor_convergent_mode copy.png}}%
-			{Fonte: \cite{everett1995sensors}}
-			\caption{\textit{Diffuse-mode proximity sensors} configurados em modo convergente podem ser usados para para determinar a distância aproximada de um objeto.}
-			\label{fig:11_optical_sensor_convergent_mode}
-		\end{figure}
-	\end{itemize}
+				\item Modelo: \textbf{LJ12A3-4-Z/BX Inductive Proximity Sensor}
+			\end{itemize}
+		\item \textbf{Capacitive Proximity Sensor}:
+			\begin{itemize}
+				\item Modelo: \textbf{KY-036 Capacitive Proximity Sensor}
+			\end{itemize}
+		\item \textbf{Ultrasonic Proximity Sensor}:
+			\begin{itemize}
+				\item Modelo: \textbf{HC-SR04 Ultrasonic Distance Sensor}
+			\end{itemize}
+		\item \textbf{Microwave Proximity Sensor}:
+			\begin{itemize}
+				\item Modelo: \textbf{RCWL-0516 Microwave Radar Sensor}
+			\end{itemize}
+	\end{enumerate}
+			
 \end{frame}
+
+
+% %------------------------------------------------
+% \section[Optical Proximity Sensors]{Optical Proximity Sensors} 
+% %------------------------------------------------
+% \begin{frame}[allowframebreaks, fragile]
+% \frametitle{Optical Proximity Sensors}
+% 	\begin{itemize}
+% 		\item São comumente encontrados em aplicações robóticas como:
+% 		\begin{itemize}
+% 			\item Detecção de piso;
+% 			\item Referenciamento na navegação;
+% 			\item Prevenção de colisão.
+% 		\end{itemize}
+% 		\item A energia modulada próximo do infravermelho é tipicamente empregada para reduzir os efeitos da iluminação ambiente, alcançando assim a relação sinal-ruído necessária para uma operação confiável \cite{everett1995sensors}.
+% 		\item Sua performance depende de:
+% 		\begin{itemize}
+% 			\item Características físicas do material o qual se deseja estimar proximidade (tamanho, formato, refletividade e o tipo de material);
+% 			\item Design do sensor;
+% 			\item Velocidade do emissor ou do alvo;
+% 			\item Qualidade e quantidade de energia erradiada/recebida.
+% 		\end{itemize}
+		
+% 		\newpage
+% 		\item \textbf{\textit{Opposed Mode}}:
+% 		\begin{itemize}
+% 			\item Também conhecido como \textit{eletric eye};
+% 			\item É o mais simples dos sensores ópticos, onde o transmissor emite um feixe de luz (geralmente LED) focado em um receptor fotosensível;
+% 			\item Qualquer objeto passante interrompe o feixe, interrompendo o circuito.
+% 			\item Foi utilizado para contagem de peças, abertura automática de portas e sistemas de segurança;
+% 			\item Em sistemas de segurança, foi usado em aplicações com mais de 30m de distância.
+% 		\end{itemize}
+% 		\begin{figure}
+% 			\centering
+% 			\copyrightbox[b]{\includegraphics[scale=0.7]{figures/8_optical_sensor_opposed_mode.png}}%
+% 			{Fonte: \cite{everett1995sensors}}
+% 			\caption{\textit{Opposed Mode sensor configuration} depende da passagem de um objeto entre o transmissor e receptor para interomper o feixe.}
+% 			\label{fig:8_optical_sensor_opposed_mode}
+% 		\end{figure}
+
+% 		\newpage
+% 		\item \textbf{\textit{Retroreflective Mode}}:
+% 		\textit{Opposed Mode}:
+% 		\begin{itemize}
+% 			\item Nesta configuração, usa-se um espelho para refletir o feixe de volta ao receptor;
+% 			\item Refletores de cubo de canto eventualmente substituiram os espelhos, devido a precisão.
+% 			\begin{itemize}
+% 				\item Três superfícies refletivas perpendiculares e uma face hipotenusa;
+% 				\item A luz entra através da face hipotenusa e é refletida por cada superfície até voltar na direção de sua fonte.
+% 			\end{itemize}
+% 			\item Em cenários de automação industrial, detecta-se proximidade quando o objeto interromper o feixe.
+% 			\begin{itemize}
+% 				\item Porém, em algumas aplicações pode-se colocar o \textit{retroreflector} no item/objeto a ser detectado.
+% 			\end{itemize} 
+% 		\end{itemize}
+% 		\begin{figure}
+% 			\centering
+% 			\copyrightbox[b]{\includegraphics[scale=0.7]{figures/9_optical_sensor_retroreflective_mode.png}}%
+% 			{Fonte: \cite{everett1995sensors}}
+% 			\caption{\textit{Corner-cube retroreflectors} são empregados para aumentar o alcance efeitvo e simplificar o alinhamento dos feixes.}
+% 			\label{fig:9_optical_sensor_retroreflective_mode}
+% 		\end{figure}
+
+% 		\newpage
+% 		\item \textbf{\textit{Diffuse-mode}}:
+% 		\begin{itemize}
+% 			\item Quando na categoria \textit{diffuse}, operam de forma similar aos da categoria retrorrefletiva, com uma exceção:
+% 			\begin{itemize}
+% 				\item A energia é retornada da superficie do objeto de interesse, ao invés de um \textit{retroreflector}.
+% 			\end{itemize}
+% 			\item Para detecção de proximidade em aplicações robóticas, diversos feixes podem ser alinhados e utilizados simultâneamente (em um \textit{array});
+% 			\item Porém, no caso desse modo, não é fornecida nenhuma medição direta de alcance.
+% 			\begin{itemize}
+% 				\item Onde as variações na refletividade do alvo podem, às vezes, gerar resultados erráticos;
+% 			\end{itemize}
+% 		\end{itemize}
+% 		\begin{figure}
+% 			\centering
+% 			\copyrightbox[b]{\includegraphics[scale=0.7]{figures/10_optical_sensor_diffuse_mode.png}}%
+% 			{Fonte: \cite{everett1995sensors}}
+% 			\caption{\textit{Diffuse-mode proximity sensors} dependem da energia refletida diretamente da superficie do alvo.}
+% 			\label{fig:10_optical_sensor_diffuse_mode}
+% 		\end{figure}
+
+% 		\newpage
+% 		\item \textbf{\textit{Convergent Mode}}:
+% 		\begin{itemize}
+% 			\item 
+% 		\end{itemize}
+% 		\begin{figure}
+% 			\centering
+% 			\copyrightbox[b]{\includegraphics[scale=0.7]{figures/11_optical_sensor_convergent_mode copy.png}}%
+% 			{Fonte: \cite{everett1995sensors}}
+% 			\caption{\textit{Diffuse-mode proximity sensors} configurados em modo convergente podem ser usados para para determinar a distância aproximada de um objeto.}
+% 			\label{fig:11_optical_sensor_convergent_mode}
+% 		\end{figure}
+% 	\end{itemize}
+% \end{frame}
 
 
 %------------------------------------------------
