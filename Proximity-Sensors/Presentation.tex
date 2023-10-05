@@ -151,7 +151,7 @@ Disciplina de Robótica Móvel\\
 \frametitle{Proximity Sensors}
 	\begin{itemize}
 		\item Usados para determina a presença de objetos próximos;
-		\item Desenvolvidos para alcance de detecção além do acessível por contato direto ou sensores táteis;
+		\item Desenvolvidos para detecção além do alcance acessível por contato direto ou sensores táteis;
 		\item Possuem uma confiabilidade alta;
 		\begin{itemize}
 			\item Sendo úteis para operações em ambientes adversos;
@@ -171,13 +171,7 @@ Disciplina de Robótica Móvel\\
 \begin{frame}[allowframebreaks, fragile]
 \frametitle{Magnetic Proximity Sensors}
 	\begin{itemize}
-		\item Aplicações \cite{baumermagnetic}:
-		\begin{itemize}
-			\item Monitoramento das posições finais dos estabilizadores telescópicos;
-			\item Limitação do curso em cilindros hidráulicos;
-			\item Detecção do nível de líquido utilizando um imã transportado por um flutuador.
-		\end{itemize}
-		\item Magnetic Reed Switches:
+		\item \textbf{Magnetic Reed Switches}:
 		\begin{itemize}
 			\item A forma mais simples de sensor de proximidade magnética;
 			\item Possuem vantagens, mas podem ser lentos, propensos a falhas e sensíveis à vibração. 
@@ -189,15 +183,21 @@ Disciplina de Robótica Móvel\\
                 \caption{\textit{Reed Switch}, é hermeticamente selado, demonstrado com seus contatos abertos.\\ O tubo é preenchido por um gás inerte para evitar a oxidação dos contatos.}
                 \label{fig:1_reed_switch}
             \end{figure}
+			\item Aplicações \cite{baumermagnetic}:
+			\begin{itemize}
+				\item Monitoramento das posições finais dos estabilizadores telescópicos;
+				\item Limitação do curso em cilindros hidráulicos;
+				\item Detecção do nível de líquido utilizando um imã transportado por um flutuador.
+			\end{itemize}
 		\newpage
 		\end{itemize}
-		\item Hall Effect Sensors:
+		\item \textbf{Hall Effect Sensors}:
 		\begin{itemize}
 			\item Detectam a presença utilizando a magnitude do campo magnético criado por um objeto;
-			\item O princípio do efeito Hall é utilizado para detetar a presença e a intensidade de um campo magnético;
-			\item Possuem um alcance de cerca de 0-40mm \cite{fenghalleffect}
+			\item O princípio do efeito Hall é utilizado para detectar a presença e a intensidade de um campo magnético;
+			\item No geral, possuem um alcance de cerca de 0-40mm \cite{fenghalleffect}
 			\begin{itemize}
-				\item Dependendo diretamente da densidade do fluxo magnético do objeto.
+				\item Dependendo diretamente da densidade do fluxo magnético do objeto;
 				\item Os ímãs mais fortes têm mais influência e podem acionar o sensor a uma distância relativamente maior.
 			\end{itemize}
 			\begin{figure}
@@ -208,17 +208,20 @@ Disciplina de Robótica Móvel\\
                 \label{fig:2_hall_effect_switch}
             \end{figure}
 		\end{itemize}
-		\item Magnetic Reed Switches:
+		\item \textbf{Magnetoresistive Sensors}:
 		\begin{itemize}
 			\item O elemento magnético-resistivo é feito de um material especial que reage apenas a campos magnéticos;
 			\begin{itemize}
-				\item Por exemplo um ímã permanente
+				\item Por exemplo, um ímã permanente.
 			\end{itemize} 
 			\item Consegue detectar mesmo campos magnéticos muito fracos;
 			\begin{itemize}
 				\item O elemento magnético-resistivo é aproximadamente dez vezes mais sensível do que um elemento Hall, o que permite uma grande distância de comutação.
 			\end{itemize}
-			\item Os interruptores de proximidade magnéticos são omnipolares, o que significa que tanto o pólo norte como o pólo sul estão a ser detectados.
+			\item Os interruptores de proximidade magnéticos são omnipolares.
+			\begin{itemize}
+				\item Tanto o pólo norte como o pólo sul poderão ser detectados.
+			\end{itemize}
 		\end{itemize}
 	\end{itemize}
 \end{frame}
@@ -231,10 +234,10 @@ Disciplina de Robótica Móvel\\
 \frametitle{Inductive Proximity Sensors}
 	\begin{itemize}
 		\item Em 1993, eram os mais utilizados em aplicações industriais, para detecção de metais ferrosos e não-ferrosos \cite{everett1995sensors};
-		\item Geram um campo eletromagnético ocilatório (100Khz até 1 MHz);
+		\item Geram um campo eletromagnético oscilatório (100Khz até 1 MHz);
 		\begin{figure}
 			\centering
-			\copyrightbox[b]{\includegraphics[scale=0.6]{figures/3_diagram_proximity_sensor.png}}%
+			\copyrightbox[b]{\includegraphics[scale=0.7]{figures/3_diagram_proximity_sensor.png}}%
 			{Fonte: \cite{everett1995sensors}}
 			\caption{Diagrama do \textit{proximity sensor} tipo ECKO e o circuito de oscilador equivalente.}
 			\label{fig:3_diagram_proximity_sensor}
@@ -277,12 +280,12 @@ Disciplina de Robótica Móvel\\
 		\begin{itemize}
 			\item Ao objeto se aproximar, a mudança na geometria ou nas caracterísitca dielétricas aumentam a capacitância.
 		\end{itemize}
-		\item Na Figura \autoref{fig:6_capaciflector}, podemos observa um sensor desenvolvido pela NASA com enfoque em prevenção de colisão robótica \cite{everett1995sensors};
+		\item Foi utilizado pela NASA com enfoque em prevenção de colisão robótica \cite{everett1995sensors};
 		\begin{itemize}
 			\item Onde braços robóticos manipuladores (em aplicações industriais e espaciais), capazes de detectar a presença humana a uma distância de até 30,48 cm.		\end{itemize}
 		\begin{figure}
 			\centering
-			\copyrightbox[b]{\includegraphics[scale=0.9]{figures/6_The-capaciflector-as-a-respiratory-rate-RR-sensor-A-Photograph-showing-one-printed.png}}%
+			\copyrightbox[b]{\includegraphics[scale=0.95]{figures/6_The-capaciflector-as-a-respiratory-rate-RR-sensor-A-Photograph-showing-one-printed.png}}%
 			{Fonte: \cite{hayward2022capaciflector}}
 			\caption{Capaciflector utilizado em outro estudo, com enfoque em medição da taxa respiratória.}
 			\label{fig:6_capaciflector}
@@ -303,7 +306,7 @@ Disciplina de Robótica Móvel\\
 			\item Um transmissor (tipicamente entre 20-200 KHz);
 			\item Um receptor que capta a energia refletida.
 		\end{itemize}
-		\item São úteis para aplicações de diversos alcances, tanto para líquidos quanto para sólidos;
+		\item São úteis para aplicações de diversos alcances, tanto para materiais líquidos ou sólidos;
 		\begin{itemize}
 			\item O alcance máximo de detecção depende não apenas dos níveis de potência emitidos, mas também da área transversal, da refletividade e da diretividade do alvo.
 		\end{itemize} 
@@ -321,7 +324,7 @@ Disciplina de Robótica Móvel\\
 		\begin{itemize}
 			\item Operam de forma similar aos sensores ultrasônicos.
 		\end{itemize}
-		\item Quando a presença de um alvo reflete energia suficiente, da antena transmissora de volta ao recepetor, a saída muda de estado.
+		\item Quando a presença de um alvo reflete energia suficiente, da antena transmissora de volta ao recepetor, há mudança de estado.
 		\begin{itemize}
 			\item Indicando que um objeto está presente no campo de visão.
 		\end{itemize} 
@@ -335,15 +338,15 @@ Disciplina de Robótica Móvel\\
 			\item Sensoriamentoe sem contato físico;
 			\item Independente de material, podendo detectar materiais de metal, plástico e até vidro;
 			\item Maiores distâncias do que outros tipos de sensores;
-			\item Podem atravessar os materiais, permitindo detectar objetos ocultos ou atrás de outros objetos
+			\item Podem atravessar os materiais, permitindo detectar objetos ocultos ou atrás de outros objetos.
 		\end{itemize}
 		
 		\newpage
 		\begin{figure}
 			\centering
 			\copyrightbox[b]{\includegraphics[scale=0.4]{figures/7_microwave_presence_sensor.png}}%
-			{Fonte: \cite{hayward2022capaciflector}}
-			\caption{O sensor de presença de microondas, requere uma antena transmissora e outra receptora separadas.}
+			{Fonte: \cite{everett1995sensors}}
+			\caption{O sensor de presença de microondas, requere antenas separadas: uma transmissora e outra receptora.}
 			\label{fig:7_microwave_presence_sensor}
 		\end{figure}
 		\item Podem ser empregados na indústria automotiva, automação industrial e sistemas de segurança.
@@ -351,33 +354,44 @@ Disciplina de Robótica Móvel\\
 \end{frame}
 
 %------------------------------------------------
-\section[Exemplos de Sensores Comuns]{Exemplos de Sensores Comuns} 
+\section[Sensores Comuns Disponíveis Atualmente]{Sensores Comuns Disponíveis Atualmente} 
 %------------------------------------------------
 \begin{frame}[fragile]
+	\frametitle{Sensores Comuns Disponíveis Atualmente}
+	\begin{columns}[t]
+		\column{.5\textwidth}
+		\centering
+		\copyrightbox[b]{\includegraphics[scale=0.45]{figures/12_example_magnetic_sensor.png}}%
+		{Fonte: \textit{arduinomodules.info}}
+		\captionof{figure}{KY-003 Hall Magnetic Sensor Module}
+		\column{.5\textwidth}
+		\copyrightbox[b]{\includegraphics[scale=0.3]{figures/13_example_inductive_sensor.png}}%
+		{Fonte: \textit{phippselectronics.com}}
+		\captionof{figure}{LJ12A3-4-Z/BX Inductive Proximity Sensor}
+	\end{columns}
+\end{frame}
+\begin{frame}[fragile]
 	\frametitle{Exemplo de Sensores Comuns}
-	\begin{enumerate}
-		\item \textbf{Magnetic Proximity Sensor}:
-			\begin{itemize}
-				\item Modelo: \textbf{KY-003 Hall Magnetic Sensor Module}
-			\end{itemize}
-		\item \textbf{Inductive Proximity Sensor}:
-			\begin{itemize}
-				\item Modelo: \textbf{LJ12A3-4-Z/BX Inductive Proximity Sensor}
-			\end{itemize}
-		\item \textbf{Capacitive Proximity Sensor}:
-			\begin{itemize}
-				\item Modelo: \textbf{KY-036 Capacitive Proximity Sensor}
-			\end{itemize}
-		\item \textbf{Ultrasonic Proximity Sensor}:
-			\begin{itemize}
-				\item Modelo: \textbf{HC-SR04 Ultrasonic Distance Sensor}
-			\end{itemize}
-		\item \textbf{Microwave Proximity Sensor}:
-			\begin{itemize}
-				\item Modelo: \textbf{RCWL-0516 Microwave Radar Sensor}
-			\end{itemize}
-	\end{enumerate}
-			
+	\begin{columns}[t]
+		\column{.5\textwidth}
+		\centering
+		\copyrightbox[b]{\includegraphics[scale=0.4]{figures/14_example_capacitive_sensor.png}}%
+		{Fonte: \textit{autocorerobotica.com.br}}
+		\captionof{figure}{KY-036 Capacitive Proximity Sensor}
+		\column{.5\textwidth}
+		\centering
+		\copyrightbox[b]{\includegraphics[scale=0.2]{figures/15_example_ultrasonic_sensor.png}}%
+		{Fonte: \textit{citex.com.br}}
+		\captionof{figure}{HC-SR04 Ultrasonic Distance Sensor}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Exemplo de Sensores Comuns}
+		\centering
+		\copyrightbox[b]{\includegraphics[scale=0.4]{figures/16_example_microwave_sensor.png}}%
+		{Fonte: \textit{autocorerobotica.com.br}}
+		\captionof{figure}{RCWL-0516 Microwave Radar Sensor}
 \end{frame}
 
 
