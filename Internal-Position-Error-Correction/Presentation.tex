@@ -145,41 +145,167 @@ Disciplina de Robótica Móvel\\
 %----------------------------------------------------------------------------------------
 
 %------------------------------------------------
-\section[Proximity Sensors]{Proximity Sensors} 
+\section{Introdução}
 %------------------------------------------------
-\begin{frame}[allowframebreaks, fragile]
-\frametitle{Proximity Sensors}
-	\begin{itemize}
-		\item Us
-	\end{itemize}
+\begin{frame}{Introdução}
+  \begin{itemize}
+    \item Contexto de robôs móveis e desafios de dead-reckoning
+      \begin{itemize}
+        \item Importância de robôs móveis em automação
+        \item Problemas comuns como deslizamento e deriva
+      \end{itemize}
+    \item Objetivo do método IPEC
+      \begin{itemize}
+        \item Correção de erros de posição
+        \item Melhoria da acurácia da orientação
+      \end{itemize}
+    \item Apresentação do veículo CLAPPER como caso de estudo
+      \begin{itemize}
+        \item Seleção de CLAPPER
+        \item Relevância na pesquisa atual
+      \end{itemize}
+  \end{itemize}
 \end{frame}
 
-
 %------------------------------------------------
-\section[Magnetic Proximity Sensors]{Magnetic Proximity Sensors} 
+\section{Metodologia}
 %------------------------------------------------
-\begin{frame}[allowframebreaks, fragile]
-\frametitle{Magnetic Proximity Sensors}
-	\begin{itemize}
-		\item a
-	\end{itemize}
+\begin{frame}{Metodologia}
+  \begin{itemize}
+    \item Descrição da estrutura do CLAPPER
+      \begin{itemize}
+        \item Hardware
+        \item Software
+      \end{itemize}
+    \item Sensores ultrassônicos e suas funcionalidades
+      \begin{itemize}
+        \item Detecção de obstáculos
+        \item Medição de distância
+      \end{itemize}
+    \item Planejamento de caminho e monitoramento
+      \begin{itemize}
+        \item Algoritmos de planejamento
+        \item Realimentação e correções
+      \end{itemize}
+  \end{itemize}
 \end{frame}
 
+%------------------------------------------------
+\section{Experimentos}
+%------------------------------------------------
+\begin{frame}{O Experimento da Linha Reta}
+  \begin{itemize}
+    \item Configurações de testes com e sem IPEC
+      \begin{itemize}
+        \item Velocidade
+        \item Tipo de terreno
+      \end{itemize}
+    \item Efeitos de "bumps" na trajetória
+      \begin{itemize}
+        \item Impacto nas medidas
+        \item Correções necessárias
+      \end{itemize}
+    \item Resultados de erros de posição e orientação
+      \begin{itemize}
+        \item Comparação estatística
+        \item Gráficos de desempenho
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{O Experimento do Caminho Retangular}
+  \begin{itemize}
+    \item Desafios em trajetórias fechadas
+      \begin{itemize}
+        \item Problemas de acumulação de erros
+        \item Correções em tempo real
+      \end{itemize}
+    \item Importância de testar em ambas as direções
+      \begin{itemize}
+        \item Impacto na simetria da trajetória
+        \item Coleta de dados
+      \end{itemize}
+    \item Resultados e comparação com e sem IPEC
+      \begin{itemize}
+        \item Métricas de erro
+        \item Validade das correções
+      \end{itemize}
+  \end{itemize}
+\end{frame}
 
 %------------------------------------------------
-\section[Inductive Proximity Sensors]{Inductive Proximity Sensors} 
+\section{Resultados}
 %------------------------------------------------
-\begin{frame}[allowframebreaks, fragile]
-\frametitle{Inductive Proximity Sensors}
-	\begin{itemize}
-		\item Em 
-	\end{itemize}
+\begin{frame}{Resultados}
+  \begin{itemize}
+    \item Melhoria significativa na precisão do dead-reckoning
+      \begin{itemize}
+        \item Quantificação da melhoria
+        \item Implicações práticas
+      \end{itemize}
+    \item Redução dos erros de orientação
+      \begin{itemize}
+        \item Impacto no planejamento de caminho
+        \item Benefícios a longo prazo
+      \end{itemize}
+    \item Resultados em diferentes condições de piso
+      \begin{itemize}
+        \item Variação dos resultados
+        \item Escopo de aplicabilidade
+      \end{itemize}
+  \end{itemize}
 \end{frame}
+
+%------------------------------------------------
+\section{Aplicações e Trabalho Futuro}
+%------------------------------------------------
+\begin{frame}{Aplicações e Trabalho Futuro}
+  \begin{itemize}
+    \item Aplicação em ambientes industriais e agrícolas
+      \begin{itemize}
+        \item Redução de custos
+        \item Aumento da eficiência
+      \end{itemize}
+    \item Extensão para outros tipos de veículos
+      \begin{itemize}
+        \item Drones
+        \item Veículos aquáticos
+      \end{itemize}
+    \item Investigação em robôs colaborativos
+      \begin{itemize}
+        \item Sincronização
+        \item Comunicação inter-robô
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\section{Conclusões}
+%------------------------------------------------
+\begin{frame}{Conclusões}
+  \begin{itemize}
+    \item Resumo das contribuições do método IPEC
+      \begin{itemize}
+        \item Eficácia na correção de erros
+        \item Versatilidade de aplicação
+      \end{itemize}
+    \item Importância da correção imediata dos erros
+      \begin{itemize}
+        \item Redução do retrabalho
+        \item Melhoria na confiabilidade
+      \end{itemize}
+    \item Validade do método em diferentes cenários
+      \begin{itemize}
+        \item Extensão do estudo
+        \item Limitações encontradas
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
 
 %------------------------------------------------
 %\section*{Referências}
 %------------------------------------------------
-
 \begin{frame}
     % \nocite{*}
     \printbibliography
