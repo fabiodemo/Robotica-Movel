@@ -46,6 +46,7 @@
 \addbibresource{bibliography.bib}
 \PassOptionsToPackage{useregional}{datetime2}
 \usepackage{xcolor}
+\usepackage{amsmath}
 
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
@@ -162,33 +163,64 @@ Disciplina de Robótica Móvel\\
         \item Aborda o aprimoramento na estimativa da direção que o robô está apontando.
       \end{itemize}
     \item Apresentação do veículo CLAPPER como caso de estudo
+    \item O método IPEC realiza os seguintes cálculos uma vez durante cada intervalo de amostragem intervalo de amostragem: Primeiro, os caminhões A e B calculam sua posição e orientação momentâneas com base em
+    no dead-reckoning, conforme figura abaixo:
+    \newpage
+    \begin{align}
+      x_{A,i} &= x_{A,i-1} + U_{A,i} \cos \theta_{A,i} \\
+      y_{A,i} &= y_{A,i-1} + U_{A,i} \sin \theta_{A,i} \\
+      x_{B,i} &= x_{B,i-1} + U_{B,i} \cos \theta_{B,i} \\
+      y_{B,i} &= y_{B,i-1} + U_{B,i} \sin \theta_{B,i}
+    \end{align}
+      
+    \item \textbf{Onde:}
+      
+    \begin{itemize}
+      \item \(x_{A,i}, y_{A,i}\) - Posição do ponto central do caminhão A no instante \(i\).
+      \item \(x_{B,i}, y_{B,i}\) - Posição do ponto central do caminhão B no instante \(i\).
+      \item \(U_{A,i}, U_{B,i}\) - Deslocamentos incrementais dos pontos centrais dos caminhões A e B durante o último intervalo de amostragem.
+      \item \(\theta_{A,i}, \theta_{B,i}\) - Orientações dos caminhões A e B, respectivamente, calculadas a partir do dead-reckoning.
+    \end{itemize}      
     \newpage
     \begin{figure}
       \centering
-      \copyrightbox[b]{\includegraphics[scale=0.35]{figures/1_Kinematic_definitions_for_the_CLAPPER.png}}%
+      \copyrightbox[b]{\includegraphics[scale=0.32]{figures/1_Kinematic_definitions_for_the_CLAPPER.png}}%
       {Fonte: \cite{borenstein1995intemal}}
-      \caption{O módulo antena/trasmissor/receptor é montado na frente (ou lateral) do veículo}
-      \label{fig:curva_de_freq}
+      \caption{Definições cinemáticas para o CLAPPER.}
+      \label{fig:1_Kinematic_definitions_for_the_CLAPPER}
     \end{figure} 
   \end{itemize}
 \end{frame}
 
 %------------------------------------------------
-\section{Metodologia}
+\section{Correção de Erros Translacionais}
 %------------------------------------------------
-\begin{frame}{Metodologia}
+\begin{frame}[allowframebreaks, fragile]
+  \frametitle{Correção de Erros Translacionais}
   \begin{itemize}
-    \item Sensores ultrassônicos são usados no CLAPPER
-      \begin{itemize}
-        \item Para detectar objetos evitar colisões.
-        \item Medição de distância até um objeto, auxiliando na navegação.
-      \end{itemize}
-    \item Planejamento de caminho e monitoramento
-      \begin{itemize}
-        \item Algoritmos responsáveis por traçar a rota que o robô deve seguir.
-        \item Como o sistema ajusta o caminho com base nos dados dos sensores e outras informações.
-      \end{itemize}
+    \item O método IPEC pode detectar apenas erros rotacionais e não erros translacionais. No entanto, erros rotacionais são mais graves do que erros translacionais, já que erros de orientação causam crescimento ilimitado de erros de posição lateral.
+        
+    \item Existem dois tipos de erros translacionais: 
+    \begin{itemize}
+      \item Erros puros ocorrem quando ambas as rodas passam por obstáculos de altura similar, e são raros. 
+      \item Erros compostos acontecem quando apenas uma roda passa por um obstáculo, causando um erro translacional e um rotacional.
+    \end{itemize}
+        
+    \item O erro de orientação em dead-reckoning normalmente é causado por um encoder reportando uma distância horizontal maior do que a distância real percorrida pela roda,
+    \begin{itemize}
+      \item permitindo assim a correção através da rotação corretiva em torno do ponto de contato da roda esquerda.
+    \end{itemize} 
+    \newpage
+    \begin{figure}
+      \centering
+      \copyrightbox[b]{\includegraphics[scale=0.32]{figures/2_correcting_composite_translational_errors.png}}%
+      {Fonte: \cite{borenstein1995intemal}}
+      \caption{Correção de erros translacionais compostos.}
+      \label{fig:2_correcting_composite_translational_errors}
+    \end{figure} 
+    \item A posição acumulada do caminhão B é sempre calculada em relação a A, usando os três codificadores internos. A única desvantagem é a necessidade de medir com precisão a distância entre os caminhões para evitar erros sistemáticos durante as curvas.
   \end{itemize}
+  
 \end{frame}
 
 %------------------------------------------------
@@ -203,8 +235,8 @@ Disciplina de Robótica Móvel\\
       \end{itemize}
     \item Efeitos de "bumps" na trajetória
       \begin{itemize}
-        \item Impacto nas medidas
-        \item Correções necessárias
+        \item Impacto nas medidas, já que obstáculos afetam as medidas de posição e orientação.
+        \item Correções são necessárias para compensar esses efeitos.
       \end{itemize}
     \item Resultados de erros de posição e orientação
       \begin{itemize}
@@ -235,74 +267,33 @@ Disciplina de Robótica Móvel\\
 \end{frame}
 
 %------------------------------------------------
-\section{Resultados}
-%------------------------------------------------
-\begin{frame}{Resultados}
-  \begin{itemize}
-    \item Melhoria significativa na precisão do dead-reckoning
-      \begin{itemize}
-        \item Quantificação da melhoria
-        \item Implicações práticas
-      \end{itemize}
-    \item Redução dos erros de orientação
-      \begin{itemize}
-        \item Impacto no planejamento de caminho
-        \item Benefícios a longo prazo
-      \end{itemize}
-    \item Resultados em diferentes condições de piso
-      \begin{itemize}
-        \item Variação dos resultados
-        \item Escopo de aplicabilidade
-      \end{itemize}
-  \end{itemize}
-\end{frame}
-
-%------------------------------------------------
-\section{Aplicações e Trabalho Futuro}
-%------------------------------------------------
-\begin{frame}{Aplicações e Trabalho Futuro}
-  \begin{itemize}
-    \item Aplicação em ambientes industriais e agrícolas
-      \begin{itemize}
-        \item Redução de custos
-        \item Aumento da eficiência
-      \end{itemize}
-    \item Extensão para outros tipos de veículos
-      \begin{itemize}
-        \item Drones
-        \item Veículos aquáticos
-      \end{itemize}
-    \item Investigação em robôs colaborativos
-      \begin{itemize}
-        \item Sincronização
-        \item Comunicação inter-robô
-      \end{itemize}
-  \end{itemize}
-\end{frame}
-
-
-%------------------------------------------------
 \section{Conclusões}
 %------------------------------------------------
 \begin{frame}{Conclusões}
   \begin{itemize}
-    \item Resumo das contribuições do método IPEC
+    \item Resumo das contribuições do método IPEC.
       \begin{itemize}
-        \item Eficácia na correção de erros
-        \item Versatilidade de aplicação
+        \item Eficácia na correção de erros sistemáticos e não-sistemáticos em tempo real;
+        \item Versatilidade de aplicação em veículos com diferentes graus de liberdade.
       \end{itemize}
-    \item Importância da correção imediata dos erros
+    \item Importância da correção imediata dos erros.
       \begin{itemize}
-        \item Redução do retrabalho
-        \item Melhoria na confiabilidade
+        \item Redução significativa do retrabalho;
+        \item Melhoria considerável na confiabilidade do sistema de navegação.
       \end{itemize}
-    \item Validade do método em diferentes cenários
+    \item Validade do método em diferentes cenários.
       \begin{itemize}
-        \item Extensão do estudo
-        \item Limitações encontradas
+        \item Aplicação em ambientes industriais sem a necessidade de fios-guia;
+        \item Utilidade em ambientes com irregularidades no solo, como na construção e na agricultura.
+      \end{itemize}
+    \item Aplicabilidade Futura do Método IPEC.
+      \begin{itemize}
+        \item Extensão para outros tipos de configurações de veículos, como a adição de um reboque codificador não motorizado;
+        \item Possibilidade de uso em robôs móveis colaborativos mas fisicamente desconectados, equipados com sensores de posição precisos.
       \end{itemize}
   \end{itemize}
 \end{frame}
+
 
 
 %------------------------------------------------
