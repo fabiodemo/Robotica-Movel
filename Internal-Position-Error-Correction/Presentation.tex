@@ -198,7 +198,11 @@ Disciplina de Robótica Móvel\\
 \begin{frame}[allowframebreaks, fragile]
   \frametitle{Correção de Erros Translacionais}
   \begin{itemize}
-    \item O método IPEC pode detectar apenas erros rotacionais e não erros translacionais. No entanto, erros rotacionais são mais graves do que erros translacionais, já que erros de orientação causam crescimento ilimitado de erros de posição lateral.
+    \item O método IPEC pode detectar apenas erros rotacionais e não erros translacionais. 
+    \begin{itemize}
+      \item Erros rotacionais são mais graves do que erros translacionais;
+      \item Erros de orientação causam crescimento ilimitado de erros de posição lateral.
+    \end{itemize}
         
     \item Existem dois tipos de erros translacionais: 
     \begin{itemize}
@@ -227,23 +231,29 @@ Disciplina de Robótica Móvel\\
 \section{Experimentos}
 %------------------------------------------------
 \begin{frame}{O Experimento da Linha Reta}
-  \begin{itemize}
-    \item Configurações de testes com e sem IPEC
+  \begin{columns}
+    % Coluna para a figura
+    \begin{column}{0.5\textwidth}
+      \begin{figure}
+        \centering
+        \copyrightbox[b]{\includegraphics[scale=0.26]{figures/3_Return_position_errors_after_completing_the_Straight_Path_Experiment.png}}%
+        {Fonte: \cite{borenstein1995intemal}}
+        \caption{Definições cinemáticas para o CLAPPER.}
+        \label{fig:3_Return_position_errors_after_completing_the_Straight_Path_Experiment}
+      \end{figure}  
+    \end{column}
+
+    % Coluna para o texto
+    \begin{column}{0.5\textwidth}
       \begin{itemize}
-        \item A velocidade é um fator nos experimentos.
-        \item O tipo de superfície em que o robô se move.
-      \end{itemize}
-    \item Efeitos de "bumps" na trajetória
-      \begin{itemize}
-        \item Impacto nas medidas, já que obstáculos afetam as medidas de posição e orientação.
-        \item Correções são necessárias para compensar esses efeitos.
-      \end{itemize}
-    \item Resultados de erros de posição e orientação
-      \begin{itemize}
-        \item Comparação estatística
-        \item Gráficos de desempenho
-      \end{itemize}
-  \end{itemize}
+        \item O CLAPPER percorreu 18m para a frente e voltou 18m para trás.
+        \item "sem obstáculos", o piso do laboratório é liso para evitar perturbações.
+        \item "com obstáculos", apenas as rodas do lado direito encontraram os obstáculos.
+        \item \textbf{Com} correção de erro (IPEC), foram usados 20 obstáculos espaçados uniformemente pelo caminho de retorno.
+        \item \textbf{Sem} correção de erro, foram usados apenas 10 obstáculos devido ao espaço limitado do laboratório.
+      \end{itemize}      
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}{O Experimento do Caminho Retangular}
@@ -257,11 +267,6 @@ Disciplina de Robótica Móvel\\
       \begin{itemize}
         \item Impacto na simetria da trajetória
         \item Coleta de dados
-      \end{itemize}
-    \item Resultados e comparação com e sem IPEC
-      \begin{itemize}
-        \item Métricas de erro
-        \item Validade das correções
       \end{itemize}
   \end{itemize}
 \end{frame}
@@ -283,7 +288,7 @@ Disciplina de Robótica Móvel\\
       \end{itemize}
     \item Validade do método em diferentes cenários.
       \begin{itemize}
-        \item Aplicação em ambientes industriais sem a necessidade de fios-guia;
+        \item Aplicação em ambientes industriais;
         \item Utilidade em ambientes com irregularidades no solo, como na construção e na agricultura.
       \end{itemize}
     \item Aplicabilidade Futura do Método IPEC.
