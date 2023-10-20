@@ -109,7 +109,7 @@
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
 
-\title[Proximity Sensors]{Proximity Sensors} % The short title appears at the bottom of every slide, the full title is only on the title page
+\title[INTERNAL POSITION ERROR CORRECTION]{INTERNAL POSITION ERROR CORRECTION} % The short title appears at the bottom of every slide, the full title is only on the title page
 
 \author[FDR]{Fábio Demo da Rosa} % Your name
 %\includegraphics[]{logositeredes.png}
@@ -147,23 +147,29 @@ Disciplina de Robótica Móvel\\
 %------------------------------------------------
 \section{Introdução}
 %------------------------------------------------
-\begin{frame}{Introdução}
+\begin{frame}[allowframebreaks, fragile]
+  \frametitle{Introdução}
   \begin{itemize}
+    \item INTERNAL POSITION ERROR CORRECTION (IPEC)
     \item Contexto de robôs móveis e desafios de dead-reckoning
       \begin{itemize}
-        \item Importância de robôs móveis em automação
-        \item Problemas comuns como deslizamento e deriva
+        \item Relevância de robôs em processos de automação industrial ou tarefas repetitivas, elevando a eficiência e precisão;
+        \item Dificuldades de navegação dos robôs, como deslizamento das rodas e erros acumulativos na estimativa de posição.
       \end{itemize}
     \item Objetivo do método IPEC
       \begin{itemize}
-        \item Correção de erros de posição
-        \item Melhoria da acurácia da orientação
+        \item Como o IPEC visa corrigir erros na estimativa da posição do robô;
+        \item Aborda o aprimoramento na estimativa da direção que o robô está apontando.
       \end{itemize}
     \item Apresentação do veículo CLAPPER como caso de estudo
-      \begin{itemize}
-        \item Seleção de CLAPPER
-        \item Relevância na pesquisa atual
-      \end{itemize}
+    \newpage
+    \begin{figure}
+      \centering
+      \copyrightbox[b]{\includegraphics[scale=0.35]{figures/1_Kinematic_definitions_for_the_CLAPPER.png}}%
+      {Fonte: \cite{borenstein1995intemal}}
+      \caption{O módulo antena/trasmissor/receptor é montado na frente (ou lateral) do veículo}
+      \label{fig:curva_de_freq}
+    \end{figure} 
   \end{itemize}
 \end{frame}
 
@@ -172,20 +178,15 @@ Disciplina de Robótica Móvel\\
 %------------------------------------------------
 \begin{frame}{Metodologia}
   \begin{itemize}
-    \item Descrição da estrutura do CLAPPER
+    \item Sensores ultrassônicos são usados no CLAPPER
       \begin{itemize}
-        \item Hardware
-        \item Software
-      \end{itemize}
-    \item Sensores ultrassônicos e suas funcionalidades
-      \begin{itemize}
-        \item Detecção de obstáculos
-        \item Medição de distância
+        \item Para detectar objetos evitar colisões.
+        \item Medição de distância até um objeto, auxiliando na navegação.
       \end{itemize}
     \item Planejamento de caminho e monitoramento
       \begin{itemize}
-        \item Algoritmos de planejamento
-        \item Realimentação e correções
+        \item Algoritmos responsáveis por traçar a rota que o robô deve seguir.
+        \item Como o sistema ajusta o caminho com base nos dados dos sensores e outras informações.
       \end{itemize}
   \end{itemize}
 \end{frame}
@@ -197,8 +198,8 @@ Disciplina de Robótica Móvel\\
   \begin{itemize}
     \item Configurações de testes com e sem IPEC
       \begin{itemize}
-        \item Velocidade
-        \item Tipo de terreno
+        \item A velocidade é um fator nos experimentos.
+        \item O tipo de superfície em que o robô se move.
       \end{itemize}
     \item Efeitos de "bumps" na trajetória
       \begin{itemize}
