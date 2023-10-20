@@ -152,17 +152,13 @@ Disciplina de Robótica Móvel\\
   \frametitle{Introdução}
   \begin{itemize}
     \item INTERNAL POSITION ERROR CORRECTION (IPEC)
-    \item Contexto de robôs móveis e desafios de dead-reckoning
-      \begin{itemize}
-        \item Relevância de robôs em processos de automação industrial ou tarefas repetitivas, elevando a eficiência e precisão;
-        \item Dificuldades de navegação dos robôs, como deslizamento das rodas e erros acumulativos na estimativa de posição.
-      \end{itemize}
-    \item Objetivo do método IPEC
+    \item Dificuldades de navegação dos robôs, como deslizamento das rodas e erros acumulativos na estimativa de posição.
+    \item Objetivos do método IPEC:
       \begin{itemize}
         \item Como o IPEC visa corrigir erros na estimativa da posição do robô;
         \item Aborda o aprimoramento na estimativa da direção que o robô está apontando.
       \end{itemize}
-    \item Apresentação do veículo CLAPPER como caso de estudo
+    \item Veículo CLAPPER usado como caso de estudo;
     \item O método IPEC realiza os seguintes cálculos uma vez durante cada intervalo de amostragem intervalo de amostragem: Primeiro, os caminhões A e B calculam sua posição e orientação momentâneas com base em
     no dead-reckoning, conforme figura abaixo:
     \newpage
@@ -206,23 +202,26 @@ Disciplina de Robótica Móvel\\
         
     \item Existem dois tipos de erros translacionais: 
     \begin{itemize}
-      \item Erros puros ocorrem quando ambas as rodas passam por obstáculos de altura similar, e são raros. 
-      \item Erros compostos acontecem quando apenas uma roda passa por um obstáculo, causando um erro translacional e um rotacional.
+      \item \textbf{Erros puros} - raros, ocorrem quando ambas as rodas passam por obstáculos de altura similar;
+      \item \textbf{Erros compostos} - quando apenas uma roda passa por um obstáculo, causando um erro translacional e um rotacional.
     \end{itemize}
         
-    \item O erro de orientação em dead-reckoning normalmente é causado por um encoder reportando uma distância horizontal maior do que a distância real percorrida pela roda,
+    \item O erro de orientação em \textit{dead-reckoning} normalmente é causado por um encoder reportando uma distância horizontal maior do que a distância real percorrida pela roda,
     \begin{itemize}
       \item permitindo assim a correção através da rotação corretiva em torno do ponto de contato da roda esquerda.
     \end{itemize} 
+    \item A posição acumulada do caminhão B é sempre calculada em relação a A, usando os três codificadores internos.
+    \begin{itemize}
+      \item A única desvantagem é a necessidade de medir com precisão a distância entre os caminhões para evitar erros sistemáticos durante as curvas.
+    \end{itemize}
     \newpage
     \begin{figure}
       \centering
-      \copyrightbox[b]{\includegraphics[scale=0.32]{figures/2_correcting_composite_translational_errors.png}}%
+      \copyrightbox[b]{\includegraphics[scale=0.33]{figures/2_correcting_composite_translational_errors.png}}%
       {Fonte: \cite{borenstein1995intemal}}
       \caption{Correção de erros translacionais compostos.}
       \label{fig:2_correcting_composite_translational_errors}
     \end{figure} 
-    \item A posição acumulada do caminhão B é sempre calculada em relação a A, usando os três codificadores internos. A única desvantagem é a necessidade de medir com precisão a distância entre os caminhões para evitar erros sistemáticos durante as curvas.
   \end{itemize}
   
 \end{frame}
