@@ -238,7 +238,7 @@ Disciplina de Robótica Móvel\\
         \centering
         \copyrightbox[b]{\includegraphics[scale=0.26]{figures/3_Return_position_errors_after_completing_the_Straight_Path_Experiment.png}}%
         {Fonte: \cite{borenstein1995intemal}}
-        \caption{Definições cinemáticas para o CLAPPER.}
+        \caption{Pontos de retorno finais do experimento.}
         \label{fig:3_Return_position_errors_after_completing_the_Straight_Path_Experiment}
       \end{figure}  
     \end{column}
@@ -257,19 +257,29 @@ Disciplina de Robótica Móvel\\
 \end{frame}
 
 \begin{frame}{O Experimento do Caminho Retangular}
-  \begin{itemize}
-    \item Desafios em trajetórias fechadas
-      \begin{itemize}
-        \item Problemas de acumulação de erros
-        \item Correções em tempo real
-      \end{itemize}
-    \item Importância de testar em ambas as direções
-      \begin{itemize}
-        \item Impacto na simetria da trajetória
-        \item Coleta de dados
-      \end{itemize}
-  \end{itemize}
-\end{frame}
+    \begin{columns}
+      % Coluna para a figura
+      \begin{column}{0.5\textwidth}
+        \begin{figure}
+          \centering
+          \copyrightbox[b]{\includegraphics[scale=0.28]{figures/4_The_Rectangular_Path_Experiment.png}}%
+          {Fonte: \cite{borenstein1995intemal}}
+          \caption{Rectangular Path Experiment.}
+          \label{fig:4_The_Rectangular_Path_Experiment}
+        \end{figure}  
+      \end{column}
+  
+      % Coluna para o texto
+      \begin{column}{0.5\textwidth}
+        \begin{itemize}
+          \item O CLAPPER seguiu um caminho retangular de 7x4 m com curvas suaves de 90 graus, sem parar nos cantos.
+          \item Testes foram feitos em ambas as direções (cw e ccw) para evitar compensação mútua de erros sistemáticos.
+          \item 10 corridas em cada direção, com e sem obstáculos, produziram erros de posição não superiores a 5 cm.
+          \item O método IPEC resultou em uma redução de mais de 20 vezes nos erros de orientação.
+        \end{itemize}      
+      \end{column}
+    \end{columns}
+  \end{frame}
 
 %------------------------------------------------
 \section{Conclusões}
