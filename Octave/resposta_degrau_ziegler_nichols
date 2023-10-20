@@ -1,0 +1,21 @@
+close all
+clear all
+clc
+den = conv([1 1], [1 1]);
+den = conv(den, [1 1]);
+Hs = tf(1,den);
+Hs
+t = 0:0.01:30
+yt = step(Hs,t)
+plot(t,yt)
+grid
+s = tf('s')
+P = 1/(s^3 + 3*s^2 + 3*s+1)
+figure(2)
+K = 6.31
+Ti = 1.4
+Td = 0.35
+Kp = K
+Ki = K/Ti
+Kd = K*Td
+C = pid(Kp, Ki, Kd)

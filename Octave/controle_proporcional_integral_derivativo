@@ -7,9 +7,10 @@ s = tf('s');  % Cria uma variável de transferência
 P = 1 / (s^2 + 10*s + 20);  % Define a função de transferência do sistema
 step(P);  % Plota a resposta ao degrau do sistema
 
-Kp = 300;  % Ganho proporcional
+Kp = 350;  % Ganho proporcional
+Ki = 300; % Ganho integral
 Kd = 10;  % Ganho derivativo
-C = pid(Kp, 0, Kd);  % Cria um controlador PID com ganho integral zero
+C = pid(Kp, Ki, Kd);  % Cria um controlador PID com ganho integral zero
 T = feedback(C*P, 1);  % Forma um sistema de feedback em loop fechado
 
 t = 0:0.1:2;  % Define o vetor de tempo
