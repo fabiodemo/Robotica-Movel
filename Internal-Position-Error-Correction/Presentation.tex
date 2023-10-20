@@ -159,8 +159,12 @@ Disciplina de Robótica Móvel\\
         \item Aborda o aprimoramento na estimativa da direção que o robô está apontando.
       \end{itemize}
     \item Veículo CLAPPER usado como caso de estudo;
-    \item O método IPEC realiza os seguintes cálculos uma vez durante cada intervalo de amostragem intervalo de amostragem: Primeiro, os caminhões A e B calculam sua posição e orientação momentâneas com base em
-    no dead-reckoning, conforme figura abaixo:
+    \item O método IPEC realiza os seguintes cálculos uma vez durante cada intervalo de amostragem: 
+    \begin{itemize}
+      \item Os caminhões A e B calculam sua posição e orientação momentâneas com base em
+      no dead-reckoning, conforme figura abaixo:
+    \end{itemize}
+
     \newpage
     \begin{align}
       x_{A,i} &= x_{A,i-1} + U_{A,i} \cos \theta_{A,i} \\
@@ -194,7 +198,7 @@ Disciplina de Robótica Móvel\\
 \begin{frame}[allowframebreaks, fragile]
   \frametitle{Correção de Erros Translacionais}
   \begin{itemize}
-    \item O método IPEC pode detectar apenas erros rotacionais e não erros translacionais. 
+    \item É descrito como eficaz na correção imediata de erros de odometria, tanto sistemáticos quanto não sistemáticos;
     \begin{itemize}
       \item Erros rotacionais são mais graves do que erros translacionais;
       \item Erros de orientação causam crescimento ilimitado de erros de posição lateral.
