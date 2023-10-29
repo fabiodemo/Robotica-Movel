@@ -19,5 +19,9 @@
 	O artigo tem como foco principal a prevenção de colisão em robôs móveis em ambientes perigosos ou com grande densidade populacional. Utilizando uma técnica de prevenção de colisão reativa, ligando com impeditivos da limitação de velocidade e aceleração.
 	A técnica principal empregada no artigo, chamada de \textit{Dynamic Windows Approach}, considera periodicamete um curto intervalo intervalo de tempo ao computar o próximo cálculo de direção, evitando a complexidade de um problema de planejamento de rota convencional.
 
+	O robô por possuir limite de aceleração (para fazer com que o robô consiga parar rapidamente e com segurança),uma outra restrição de velocidade é imposta: o robô só considera velocidades que podem ser alcançadas durante o próximo intervalo de tempo. 
+	Tais velocidades formam a \textit{Dynamic Window}, que é a combinação das velocidades atuais do robô no espaço de velocidades possíveis.
+
+	As velocidades admissíveis para o veiculo estão dentro da \textit{Dynamic Window}, combinando velocidade translacional e rotacional, seno escolhida ao maximizar a \textit{objective function}. 
 
 \end{document}
