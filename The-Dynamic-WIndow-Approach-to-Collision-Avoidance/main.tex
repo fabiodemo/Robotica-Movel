@@ -5,7 +5,7 @@
 \usepackage{physics} % provides lots of nice features and commands often used in physics, it also loads some other packages (like AMSmath)
 \usepackage{siunitx} % typesets numbers with units very nicely
 \usepackage{enumerate} % allows us to customize our lists
-
+\renewcommand{\refname}{Referências}
 
 
 \begin{document}
@@ -16,7 +16,7 @@
 
 \maketitle
 
-\section{Resumo}
+\section*{Resumo}
 	O artigo tem como foco principal a prevenção de colisão em robôs móveis em ambientes perigosos ou com grande densidade populacional. Utilizando uma técnica de prevenção de colisão reativa, ligando com impeditivos da limitação de velocidade e aceleração.
 	A técnica principal empregada no artigo, chamada de \textit{Dynamic Windows Approach}, considera periodicamete um curto intervalo intervalo de tempo ao computar o próximo cálculo de direção, evitando a complexidade de um problema de planejamento de rota convencional.
 
