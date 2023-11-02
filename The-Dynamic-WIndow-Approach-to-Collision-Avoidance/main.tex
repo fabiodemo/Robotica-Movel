@@ -23,8 +23,12 @@
 	O robô por possuir limite de aceleração (para fazer com que o robô consiga parar rapidamente e com segurança),uma outra restrição de velocidade é imposta: o robô só considera velocidades que podem ser alcançadas durante o próximo intervalo de tempo. 
 	Tais velocidades formam a \textit{Dynamic Window}, que é a combinação das velocidades atuais do robô no espaço de velocidades possíveis.
 
-	As velocidades admissíveis para o veiculo estão dentro da \textit{Dynamic Window}, combinando velocidade translacional e rotacional, seno escolhida ao maximizar a \textit{objective function}. A \textit{Objetive Function} inclui a medição do progresso em direção a uma localização desejada, a velocidade e avanço do robô e a distância do próximo obstãculo na trajetória.
+	As velocidades admissíveis para o veiculo estão dentro da \textit{Dynamic Window}, combinando velocidade translacional e rotacional, seno escolhida ao maximizar a \textit{objective function}. A \textit{Objetive Function} inclui a medição do progresso em direção a uma localização desejada, a velocidade e avanço do robô e a distância do próximo obstáculo na trajetória.
 	Ao combinar esses itens, o robô se troca seu desejo de se mover rapidamente até o objetivo e o seu desejo de contonar os obstáculos.
+
+	Em vez de avaliar o espaço de velocidade completo, é considerado apenas o espaço das velocidades admissíveis dentro da \textit{Dynamic Window}, levando em conta a dinâmica do robô. Um exemplo é dado mostrando como o comportamento do robô muda com diferentes velocidades.
+
+	A dependência das acelerações também é debatida no artigo, mostrando que a janela dinâmica depende das acelerações dadas, e espaços de velocidade menores são considerados para acelerações menores.
 
 
 \end{document}
