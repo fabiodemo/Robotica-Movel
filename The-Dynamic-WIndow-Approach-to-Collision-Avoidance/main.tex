@@ -23,7 +23,9 @@
 	O robô possui um limite de aceleração (para que consiga parar rapidamente e com segurança), além de outra restrição de velocidade imposta: o robô só considera velocidades que podem ser alcançadas durante o próximo intervalo de tempo. 
 	Tais velocidades formam a \textit{Dynamic Window}, que é a combinação das velocidades atuais do robô no espaço de velocidades possíveis.
 
-	As velocidades admissíveis para o veiculo estão dentro da \textit{Dynamic Window}, combinando velocidade translacional e rotacional, sendo escolhida ao maximizar a \textit{objective function}. A \textit{Objetive Function} inclui a medição do progresso em direção a uma localização desejada, a velocidade ao robô avançár e a distância do próximo obstáculo na trajetória.
+	As velocidades admissíveis para o veiculo estão dentro da \textit{Dynamic Window}, combinando velocidade translacional e rotacional, sendo a velocidade escolhida ao maximizar a \textit{objective function}. 
+	
+	A \textit{Objetive Function} inclui a medição do progresso em direção a uma localização desejada, a velocidade ao robô avançar e a distância do próximo obstáculo na trajetória.
 	Ao combinar esses itens, o robô troca seu desejo de se mover rapidamente até o objetivo e o seu desejo de contonar os obstáculos.
 
 	O artigo, próximo ao fim, detalha a implementação, testes e os resultados experimentais usando o robô RHINO, que utiliza vários sensores e uma câmera estéreo. A abordagem da janela dinâmica foi testada neste robô, com bons resultados observados em sua capacidade de navegar com segurança e eficiência.
