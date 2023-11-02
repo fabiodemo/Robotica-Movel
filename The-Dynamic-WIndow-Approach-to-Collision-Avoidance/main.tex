@@ -20,16 +20,24 @@
 	O artigo tem como foco principal a prevenção de colisão em robôs móveis em ambientes perigosos ou com grande densidade populacional. Utilizando uma técnica de prevenção de colisão reativa, ligando com impeditivos da limitação de velocidade e aceleração.
 	A técnica principal empregada no artigo, chamada de \textit{Dynamic Windows Approach}, considera periodicamete um curto intervalo intervalo de tempo ao computar o próximo cálculo de direção, evitando a complexidade de um problema de planejamento de rota convencional.
 
-	O robô por possuir limite de aceleração (para fazer com que o robô consiga parar rapidamente e com segurança),uma outra restrição de velocidade é imposta: o robô só considera velocidades que podem ser alcançadas durante o próximo intervalo de tempo. 
+	O robô possui um limite de aceleração (para consiga parar rapidamente e com segurança), além de outra restrição de velocidade imposta: o robô só considera velocidades que podem ser alcançadas durante o próximo intervalo de tempo. 
 	Tais velocidades formam a \textit{Dynamic Window}, que é a combinação das velocidades atuais do robô no espaço de velocidades possíveis.
 
-	As velocidades admissíveis para o veiculo estão dentro da \textit{Dynamic Window}, combinando velocidade translacional e rotacional, seno escolhida ao maximizar a \textit{objective function}. A \textit{Objetive Function} inclui a medição do progresso em direção a uma localização desejada, a velocidade e avanço do robô e a distância do próximo obstáculo na trajetória.
-	Ao combinar esses itens, o robô se troca seu desejo de se mover rapidamente até o objetivo e o seu desejo de contonar os obstáculos.
+	As velocidades admissíveis para o veiculo estão dentro da \textit{Dynamic Window}, combinando velocidade translacional e rotacional, sendo escolhida ao maximizar a \textit{objective function}. A \textit{Objetive Function} inclui a medição do progresso em direção a uma localização desejada, a velocidade ao robô avançár e a distância do próximo obstáculo na trajetória.
+	Ao combinar esses itens, o robô troca seu desejo de se mover rapidamente até o objetivo e o seu desejo de contonar os obstáculos.
 
-	Em vez de avaliar o espaço de velocidade completo, é considerado apenas o espaço das velocidades admissíveis dentro da \textit{Dynamic Window}, levando em conta a dinâmica do robô. Um exemplo é dado mostrando como o comportamento do robô muda com diferentes velocidades.
-
-	A dependência das acelerações também é debatida no artigo, mostrando que a janela dinâmica depende das acelerações dadas, e espaços de velocidade menores são considerados para acelerações menores.
+	Em vez de avaliar o espaço de velocidade completo, é considerado apenas o espaço das velocidades admissíveis dentro da \textit{Dynamic Window}, levando em conta a dinâmica do robô. 
 
 	O artigo, próximo ao fim, detalha a implementação, testes e os resultados experimentais usando o robô RHINO, que utiliza vários sensores e uma câmera estéreo. A abordagem da janela dinâmica foi testada neste robô, com bons resultados observados em sua capacidade de navegar com segurança e eficiência.
+
+	O papel da \textit{Dynamic Window} é crucial para determinar o comportamento do robô, principalmente em cenários onde a navegação seja mais complicada. Com as abordagens e experimentos dos autores demonstrou: a decisão do robô seguir determinado caminho dependia de sua velocidade atual e possíveis acelerações, bem como a capacidade do robô se locomover-se por corredores (mesmo com obstáculos).
+
+	\begin{thebibliography}{2}
+
+		\bibitem{aa} Anna Anderegg, 2019, Thoughts.
+		
+		\end{thebibliography}
+		
+	\end{document} 
 
 \end{document}
