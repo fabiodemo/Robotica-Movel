@@ -22,6 +22,6 @@ def turtle_circle(radius):
 
 if __name__ == '__main__':
     try:
-        turtle_circle(5)
+        turtle_circle(-3)
     except rospy.ROSInterruptException:
         pass        
