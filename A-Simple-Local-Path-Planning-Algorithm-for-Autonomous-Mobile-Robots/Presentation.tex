@@ -193,7 +193,6 @@ Disciplina de Robótica Móvel\\
         \item Década de 1990: Abordagem de Decomposição Celular (Cell Decomposition) torna-se popular, adequada para ambientes estáticos e dinâmicos, fácil implementação e atualização, mas inicialmente lenta em computadores antigos.
         \item Século XXI: Introdução de Quadtree e Framed Quadtree, e Grafos MAKLINK, para aumentar a precisão de caminhos encontrados.
     \end{itemize}
-
   \end{itemize}
   
 \end{frame}
@@ -218,8 +217,9 @@ Disciplina de Robótica Móvel\\
       \item \textbf{Método do Campo Potencial:} Robôs operam como partículas em campos de potenciais atrativos e repulsivos.
       \item \textbf{Algoritmo PointBug:} Evita o perímetro dos obstáculos, diferenciando-se dos algoritmos Bug tradicionais.
       \item \textbf{Implementação do PointBug:} Utiliza sensores de longo alcance e sistemas de navegação para decisões de trajetória.
+    \end{itemize}
   \end{itemize}
-\end{itemize}
+
 \end{frame}
 
 %------------------------------------------------
@@ -228,8 +228,14 @@ Disciplina de Robótica Móvel\\
 \begin{frame}[allowframebreaks, fragile]
   \frametitle{Algoritmos Bug}
   \begin{itemize}
-    \item É
+    \item \textbf{Introdução:} Algoritmos Bug são métodos de navegação para robôs móveis em planejamento de trajetória local, com sensores mínimos e algoritmos simples.
+    \item \textbf{Variações Comuns:} Incluem Bug1, Bug2, DistBug, VisBug e TangentBug. Outras variações são Alg1, Alg2, Class1, Rev/Rev2, OneBug e LeaveBug.
+    \item \textbf{Evolução e Melhorias:} Focados em caminhos mais curtos, menor tempo, algoritmos mais simples e melhor desempenho.
+    \item \textbf{Bug1 e Bug2:} Bug1 é cauteloso e cobre mais do que o perímetro total do obstáculo, enquanto Bug2 é menos eficiente em alguns casos, mas tem cobertura menor.
+    \item \textbf{Desenvolvimentos Posteriores:} VisBug, Alg1 e Alg2 melhoram a eficiência, com Rev1 e Rev2 resolvendo problemas de procedimentos reversos. DistBug e TangentBug incorporam sensores de alcance.
+    \item \textbf{Aplicação em Planejamento de Trajetória Local:} Utilizados para navegação em ambientes desconhecidos ou dinâmicos, adaptando-se a mudanças e obstáculos.
   \end{itemize}
+
 \end{frame}
 
 %------------------------------------------------
@@ -238,7 +244,33 @@ Disciplina de Robótica Móvel\\
 \begin{frame}[allowframebreaks, fragile]
   \frametitle{Algoritmos PointBug}
   \begin{itemize}
-    \item É
+    \item \textbf{Contexto:} O PointBug é um algoritmo de navegação recentemente desenvolvido para robôs em ambientes planares desconhecidos com obstáculos estacionários.
+    \item \textbf{Detecção de Pontos:} Utiliza um sensor de alcance para detectar mudanças súbitas na distância até o obstáculo mais próximo. Mudanças súbitas são identificadas quando a distância varia significativamente em um curto intervalo de tempo.
+    \item \textbf{Determinação do Próximo Ponto:} O próximo ponto de movimento é determinado pela saída do sensor de alcance, baseando-se na variação ($\Delta{d}$) da distância detectada.
+    \item \textbf{Funcionamento do Algoritmo:} O robô inicialmente se direciona ao ponto-alvo, rotacionando para localizar um ponto súbito e mover-se em sua direção. Esse processo se repete até o robô atingir o ponto-alvo.
+    \item \textbf{Resolução de Problemas de Mínimos Locais:} O algoritmo é eficaz para resolver o problema de mínimos locais em ambientes desconhecidos, identificando pontos súbitos de maneira confiável.
+    \item \textbf{Exemplos e Demonstrações:} O artigo \cite{buniyamin2011simple} analisa obstáculos de diferentes formas e como o algoritmo identifica os pontos súbitos.
+\begin{lstlisting}
+While Not Target
+  If robot rotation <= 360
+    Robot rotates right of left according to position of dmin
+  If sudden point
+      If 180 degree rotation
+        Ignore reading /* to avoid robot return to previous point */
+      Else
+        Get distance from current sudden point to next sudden point
+        Get angle of robot rotation
+        Move to new point according to distance and rotation angle
+        Record New dmin value
+        Reset rotation
+      End if
+    End if
+  Else
+    Robot Stop /* No sudden point and exit loop */
+  End if
+While end
+Robot Stop /* Robot successfully reaches target */
+\end{lstlisting}
   \end{itemize}
 \end{frame}
   
