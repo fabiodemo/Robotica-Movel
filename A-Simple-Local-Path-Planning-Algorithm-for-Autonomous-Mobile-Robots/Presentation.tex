@@ -151,9 +151,12 @@ Disciplina de Robótica Móvel\\
 \begin{frame}[allowframebreaks, fragile]
   \frametitle{Introdução}
   \begin{itemize}
-    \item INTERNAL \cite*{cruzsimple}
-    \item Planejamento de caminho: elemento crucial para robôs móveis.
-    \item Objetivo: determinar rotas para passar por pontos específicos do ambiente.
+    \item Planejamento de caminho: elemento crucial para robôs móveis;
+    \item Objetivo: determinar rotas para passar por pontos específicos do ambiente;
+    \item As abordagens são de acordo com o ambiente, o tipo de sensor, as capacidades do robô, entre outros;
+    \begin{itemize}
+      \item e essas abordagens estão gradualmente buscando um melhor desempenho em termos de tempo, distância, custo e complexidade \cite*{cruzsimple}.
+    \end{itemize}
   \end{itemize}
 \end{frame}
 
@@ -163,10 +166,16 @@ Disciplina de Robótica Móvel\\
 \begin{frame}[allowframebreaks, fragile]
   \frametitle{Abordagens de Planejamento de Caminho}
   \begin{itemize}
-    \item Encontrar caminhos adequados para um robô com geometria específica.
-    \item Objetivo: alcançar uma posição e orientação final a partir de uma inicial.
-    \item Tipos de ambiente: estático (sem objetos móveis) e dinâmico (com objetos móveis).
-    \item Abordagens: planejamento local e global.
+    \item Deseja-se encontrar caminhos adequados para um robô com geometria específica;
+    \item Objetiva-se alcançar uma posição e orientação final a partir de uma inicial;
+    \item O problema de navegação do robô móvel pode ser dividido em três subtarefas, de acordo com \cite*{cruzsimple}: 
+    \begin{itemize}
+      \item \textbf{Mapeamento e Modelagem do Ambiente:} o robô deve ser capaz de construir um mapa do ambiente e modelar o ambiente;
+      \item \textbf{Planejamento de Caminho:} o robô deve ser capaz de planejar um caminho para alcançar o objetivo;
+      \item \textbf{Travessia de Caminho:} o robô deve ser capaz de seguir o caminho planejado e evitar colisões com obstáculos.
+    \end{itemize}
+    \item Tipos de ambiente: estático (sem objetos móveis) e dinâmico (com objetos móveis);
+    \item Abordagens: planejamento local e global;
   \end{itemize}
   
 \end{frame}
