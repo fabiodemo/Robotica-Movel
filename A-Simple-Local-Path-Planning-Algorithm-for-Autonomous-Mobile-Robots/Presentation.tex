@@ -189,7 +189,9 @@ Disciplina de Robótica Móvel\\
     \item \textbf{Modelagem de Ambiente:} 
     \begin{itemize}
         \item Década de 1980: Introdução de Cones Generalizados (Generalized Cones) por Rodney Brooks. Funciona em ambientes simples, mas limitado em complexidade.
-        \item Abordagem de Mapa Rodoviário (Roadmap), incluindo Grafos de Visibilidade (Visibility Graph) e Diagramas de Voronoi. Efetivos em ambientes simples, mas complexos e demorados na criação.
+        \begin{itemize}
+          \item Abordagem de Mapa Rodoviário (Roadmap), incluindo Grafos de Visibilidade (Visibility Graph) e Diagramas de Voronoi. Efetivos em ambientes simples, mas complexos e demorados na criação.
+        \end{itemize}
         \item Década de 1990: Abordagem de Decomposição Celular (Cell Decomposition) torna-se popular, adequada para ambientes estáticos e dinâmicos, fácil implementação e atualização, mas inicialmente lenta em computadores antigos.
         \item Século XXI: Introdução de Quadtree e Framed Quadtree, e Grafos MAKLINK, para aumentar a precisão de caminhos encontrados.
     \end{itemize}
@@ -275,11 +277,19 @@ Robot Stop /* Robot successfully reaches target */
   % "A Figura 3 ilustra um sensor de distância escaneando um obstáculo em forma de pentágono, identificado pelos pontos de A a E. Acompanhando a figura, há um gráfico que representa a distância medida pelo sensor em centímetros, também de A a E. A linha no ponto C é perpendicular à superfície do obstáculo, marcando a menor distância detectada até ele. Observa-se que o valor da distância aumenta constantemente de C para B e de C para D. Entretanto, do ponto B para A, o gráfico mostra um aumento repentino na distância, quase dobrando o valor, e de D para E, o aumento da distância ocorre de alguns centímetros para o infinito. Os pontos A e E são identificados como pontos súbitos, sendo considerados pontos de referência para a próxima movimentação do robô. "
   \begin{figure}
     \centering
-    \includegraphics[width=0.5\textwidth]{figures/pointbug.png}
-    \caption{Exemplo de aplicação do algoritmo PointBug.}
-    \source{\cite{buniyamin2011simple}}
+    \copyrightbox[b]{\includegraphics[scale=0.35]{figures/1_Range_sensor_is_detecting_an_obstacle_from_left_to_right_and_right_to_left.png}}%
+    {Fonte: \cite{buniyamin2011simple}}
+    \caption{O sensor de alcance está detectando um obstáculo da esquerda para a direita e da direita para a esquerda.}
+    \label{fig:1_range_sensor_obstacle}
   \end{figure}
   % A Figura 4 complementa ao demonstrar como os pontos súbitos são detectados em obstáculos de diferentes formas.
+  \begin{figure}
+    \centering
+    \copyrightbox[b]{\includegraphics[scale=0.30]{figures/2_Sudden_points_on_different_surfaces_detected_by_range_sensor.png}}%
+    {Fonte: \cite{buniyamin2011simple}}
+    \caption{Trajetória gerada pelo PointBug para resolver o problema de mínimos locais.}
+    \label{fig:2_range_sensor_obstacle}
+  \end{figure}
 \end{frame}
   
 %------------------------------------------------
