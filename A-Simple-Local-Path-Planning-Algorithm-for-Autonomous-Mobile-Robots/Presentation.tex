@@ -345,19 +345,23 @@ Robot Stop /* Robot successfully reaches target */
 %------------------------------------------------
 \section{Conclusões}
 %------------------------------------------------
-\begin{frame}[allowframebreaks, fragile]
+\begin{frame}[fragile]
   \frametitle{Conclusões}
   \begin{itemize}
-    \item Introdução do Algoritmo de Planejamento de Trajetória Baseado em Sensor Ponto a Ponto, com mínima necessidade de informações prévias.
-    \item Eficiência em ambientes dinâmicos, utilizando informações em tempo real de sensores de alcance.
-    \item Desempenho influenciado pelo número de pontos súbitos detectados.
+    \item De acordo com o artigo \cite{buniyamin2011simple}, tratou-se sobre:
     \begin{itemize}
-      \item Menos pontos indicam maior eficiência.
+      \item Introdução do Algoritmo de Planejamento de Trajetória Baseado em Sensor Ponto a Ponto, com mínima necessidade de informações prévias.
+      \item Provou-se a eficiência do PointBug em ambientes dinâmicos, utilizando informações em tempo real de sensores de alcance.
+      \item Desempenho é diretamente influenciado pelo número de pontos súbitos detectados.
+      \begin{itemize}
+        \item Menos pontos indicam maior eficiência.
+      \end{itemize}
+      \item Efetividade dependente diretamente da forma dos obstáculos.
+      \begin{itemize}
+        \item Obstáculos circulares geram menos pontos súbitos.
+      \end{itemize} 
     \end{itemize}
-    \item Efetividade dependente da forma dos obstáculos.
-    \begin{itemize}
-      \item Obstáculos circulares geram menos pontos súbitos.
-    \end{itemize} 
+
   \end{itemize}
 \end{frame}
 
