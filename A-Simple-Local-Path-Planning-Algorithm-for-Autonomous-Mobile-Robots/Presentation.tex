@@ -151,11 +151,11 @@ Disciplina de Robótica Móvel\\
 \begin{frame}[allowframebreaks, fragile]
   \frametitle{Introdução}
   \begin{itemize}
-    \item Planejamento de caminho: elemento crucial para robôs móveis;
-    \item Objetivo: determinar rotas para passar por pontos específicos do ambiente;
-    \item As abordagens são de acordo com o ambiente, o tipo de sensor, as capacidades do robô, entre outros;
+    \item O planejamento de trajetória/rota/caminho é um elemento crucial para robôs móveis;
+    \item É necessário determinar rotas, para passar ou chegar até pontos específicos do ambiente;
+    \item As abordagens para planejar a trajetória são de acordo com o ambiente, o tipo de sensor, as capacidades do robô, entre outros;
     \begin{itemize}
-      \item e essas abordagens estão gradualmente buscando um melhor desempenho em termos de tempo, distância, custo e complexidade \cite{buniyamin2011simple}.
+      \item tais abordagens estão gradualmente buscando um melhor desempenho em termos de tempo, distância, custo e complexidade \cite{buniyamin2011simple}.
     \end{itemize}
   \end{itemize}
 \end{frame}
@@ -180,30 +180,30 @@ Disciplina de Robótica Móvel\\
   
 \end{frame}
 
-%------------------------------------------------
-\section{Evolução da Modelagem de Ambiente do Robô}
-%------------------------------------------------
-\begin{frame}[allowframebreaks, fragile]
-  \frametitle{Evolução da Modelagem de Ambiente do Robô}
-  \begin{itemize}
-    \item \textbf{Modelagem de Ambiente:} 
-    \begin{itemize}
-        \item Década de 1980: Introdução de Cones Generalizados (Generalized Cones) por Rodney Brooks. Funciona em ambientes simples, mas limitado em complexidade.
-        \begin{itemize}
-          \item Abordagem de Mapa Rodoviário (Roadmap), incluindo Grafos de Visibilidade (Visibility Graph) e Diagramas de Voronoi. Efetivos em ambientes simples, mas complexos e demorados na criação.
-        \end{itemize}
-        \item Década de 1990: Abordagem de Decomposição Celular (Cell Decomposition) torna-se popular, adequada para ambientes estáticos e dinâmicos, fácil implementação e atualização, mas inicialmente lenta em computadores antigos.
-        \item Século XXI: Introdução de Quadtree e Framed Quadtree, e Grafos MAKLINK, para aumentar a precisão de caminhos encontrados.
-    \end{itemize}
-  \end{itemize}
+% %------------------------------------------------
+% \section{Evolução da Modelagem de Ambiente do Robô}
+% %------------------------------------------------
+% \begin{frame}[fragile]
+%   \frametitle{Evolução da Modelagem de Ambiente do Robô}
+%   \begin{itemize}
+%     \item \textbf{Modelagem de Ambiente:} 
+%     \begin{itemize}
+%         \item Década de 1980: Introdução de Cones Generalizados (Generalized Cones) por Rodney Brooks. Funciona em ambientes simples, mas limitado em complexidade.
+%         \begin{itemize}
+%           \item Abordagem de Mapa Rodoviário (Roadmap), incluindo Grafos de Visibilidade (Visibility Graph) e Diagramas de Voronoi. Efetivos em ambientes simples, mas complexos e demorados na criação.
+%         \end{itemize}
+%         \item Década de 1990: Abordagem de Decomposição Celular (Cell Decomposition) torna-se popular, adequada para ambientes estáticos e dinâmicos, fácil implementação e atualização, mas inicialmente lenta em computadores antigos.
+%         \item Século XXI: Introdução de Quadtree e Framed Quadtree, e Grafos MAKLINK, para aumentar a precisão de caminhos encontrados.
+%     \end{itemize}
+%   \end{itemize}
   
-\end{frame}
+% \end{frame}
 
 
 %------------------------------------------------
 \section{Planejamento de Trajetória (Local e Global)}
 %------------------------------------------------
-\begin{frame}[allowframebreaks, fragile]
+\begin{frame}[fragile]
   \frametitle{Planejamento de Caminho (Local e Global)}
   \begin{itemize}
     \item \textbf{Planejamento de Trajetória Global:} 
@@ -214,11 +214,12 @@ Disciplina de Robótica Móvel\\
     \end{itemize}
     \item \textbf{Planejamento de Trajetória Local:}
     \begin{itemize}
-      \item \textbf{Definição:} Essencial para robôs em ambientes dinâmicos, foca na evasão de obstáculos usando sensores.
-      \item \textbf{Funcionamento:} Robôs seguem a rota mais direta, alterando-a ao encontrar obstáculos.
-      \item \textbf{Método do Campo Potencial:} Robôs operam como partículas em campos de potenciais atrativos e repulsivos.
+      \item Essencial para robôs em ambientes dinâmicos, foca na evasão de obstáculos usando sensores.
+      \item Robôs seguem a rota mais direta, alterando-a ao encontrar obstáculos.
       \item \textbf{Algoritmo PointBug:} Evita o perímetro dos obstáculos, diferenciando-se dos algoritmos Bug tradicionais.
-      \item \textbf{Implementação do PointBug:} Utiliza sensores de longo alcance e sistemas de navegação para decisões de trajetória.
+      \begin{itemize}
+        \item \textbf{Implementação do PointBug:} Utiliza sensores de curto alcance e sistemas de navegação para decisões de trajetória.
+      \end{itemize}
     \end{itemize}
   \end{itemize}
 
@@ -227,15 +228,23 @@ Disciplina de Robótica Móvel\\
 %------------------------------------------------
 \section{Algoritmos Bug}
 %------------------------------------------------
-\begin{frame}[allowframebreaks, fragile]
+\begin{frame}[fragile]
   \frametitle{Algoritmos Bug}
   \begin{itemize}
-    \item \textbf{Introdução:} Algoritmos Bug são métodos de navegação para robôs móveis em planejamento de trajetória local, com sensores mínimos e algoritmos simples.
-    \item \textbf{Variações Comuns:} Incluem Bug1, Bug2, DistBug, VisBug e TangentBug. Outras variações são Alg1, Alg2, Class1, Rev/Rev2, OneBug e LeaveBug.
-    \item \textbf{Evolução e Melhorias:} Focados em caminhos mais curtos, menor tempo, algoritmos mais simples e melhor desempenho.
-    \item \textbf{Bug1 e Bug2:} Bug1 é cauteloso e cobre mais do que o perímetro total do obstáculo, enquanto Bug2 é menos eficiente em alguns casos, mas tem cobertura menor.
-    \item \textbf{Desenvolvimentos Posteriores:} VisBug, Alg1 e Alg2 melhoram a eficiência, com Rev1 e Rev2 resolvendo problemas de procedimentos reversos. DistBug e TangentBug incorporam sensores de alcance.
-    \item \textbf{Aplicação em Planejamento de Trajetória Local:} Utilizados para navegação em ambientes desconhecidos ou dinâmicos, adaptando-se a mudanças e obstáculos.
+    \item Algoritmos Bug são métodos de navegação para robôs móveis em planejamento de trajetória local, com sensores mínimos e algoritmos simples.
+    \item Bug1 é cauteloso e cobre mais do que o perímetro total do obstáculo, enquanto Bug2 é menos eficiente em alguns casos, mas tem cobertura menor.
+    \item \textbf{Variações:} 
+    \begin{itemize}
+      \item Bug1, Bug2, DistBug, VisBug e TangentBug. Outras variações são Alg1, Alg2, Class1, Rev/Rev2, OneBug e LeaveBug.
+    \end{itemize}
+    \item \textbf{Evolução e Melhorias:} 
+    \begin{itemize}
+      \item Caminhos mais curtos, menor tempo, algoritmos mais simples e melhor desempenho.
+    \end{itemize}
+    \item \textbf{Aplicação em Planejamento de Trajetória Local:} 
+    \begin{itemize}
+      \item Utilizados para navegação em ambientes desconhecidos ou dinâmicos, adaptando-se a mudanças e obstáculos.
+    \end{itemize}
   \end{itemize}
 
 \end{frame}
