@@ -272,9 +272,27 @@ While end
 Robot Stop /* Robot successfully reaches target */
 \end{lstlisting}
   \end{itemize}
+  % "A Figura 3 ilustra um sensor de distância escaneando um obstáculo em forma de pentágono, identificado pelos pontos de A a E. Acompanhando a figura, há um gráfico que representa a distância medida pelo sensor em centímetros, também de A a E. A linha no ponto C é perpendicular à superfície do obstáculo, marcando a menor distância detectada até ele. Observa-se que o valor da distância aumenta constantemente de C para B e de C para D. Entretanto, do ponto B para A, o gráfico mostra um aumento repentino na distância, quase dobrando o valor, e de D para E, o aumento da distância ocorre de alguns centímetros para o infinito. Os pontos A e E são identificados como pontos súbitos, sendo considerados pontos de referência para a próxima movimentação do robô. "
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/pointbug.png}
+    \caption{Exemplo de aplicação do algoritmo PointBug.}
+    \source{\cite{buniyamin2011simple}}
+  \end{figure}
+  % A Figura 4 complementa ao demonstrar como os pontos súbitos são detectados em obstáculos de diferentes formas.
 \end{frame}
   
-  
+%------------------------------------------------
+\section{Simulação}
+%------------------------------------------------
+\begin{frame}[allowframebreaks, fragile]
+  \frametitle{Simulação}
+  \begin{itemize}
+    \item A simulação do algoritmo de navegação ponto a ponto (PointBug) foi realizada utilizando ActionScript 2.0 no Adobe Flash CS3.
+    \item Foram simulados três tipos de ambientes: um ambiente livre, um ambiente baseado em labirinto e um ambiente semelhante a um escritório.
+  \end{itemize}
+\end{frame}
+
 
 %------------------------------------------------
 \section{Conclusões}
