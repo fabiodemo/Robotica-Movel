@@ -63,7 +63,7 @@
     keywordstyle=[3]{\color{magenta}},
     numberstyle=\tiny\color{codegray},
     stringstyle=\color{codepurple},
-    basicstyle=\ttfamily\footnotesize,
+    basicstyle=\ttfamily\tiny,
     breakatwhitespace=false,         
     breaklines=true,                 
     captionpos=b,                    
@@ -74,8 +74,11 @@
     showstringspaces=false,
     showtabs=false,                  
     tabsize=2,
-    otherkeywords = {tf, Sequential, SimpleRNN, Dense, GRU, LSTM},
-    morekeywords = [3]{keras},
+    % language=Python, % Adiciona suporte para Python
+    morekeywords={If, Then, Else, While, Do, For, Return, end, End, if}, % Adicione suas palavras-chave aqui
+    morecomment=[l]{//}, % Define o estilo de comentário, ajuste conforme necessário
+    morecomment=[s]{/*}{*/}, % Para comentários de bloco, se necessário
+    morestring=[b]" % Para strings, se necessário
 }
 
 \lstset{style=mystyle}
@@ -204,7 +207,7 @@ Disciplina de Robótica Móvel\\
 \section{Planejamento de Trajetória (Local e Global)}
 %------------------------------------------------
 \begin{frame}[fragile]
-  \frametitle{Planejamento de Caminho (Local e Global)}
+  \frametitle{Planejamento de Trajetória (Local e Global)}
   \begin{itemize}
     \item \textbf{Planejamento de Trajetória Global:} 
     \begin{itemize}
@@ -255,12 +258,14 @@ Disciplina de Robótica Móvel\\
 \begin{frame}[allowframebreaks, fragile]
   \frametitle{Algoritmos PointBug}
   \begin{itemize}
-    \item \textbf{Contexto:} O PointBug é um algoritmo de navegação recentemente desenvolvido para robôs em ambientes planares desconhecidos com obstáculos estacionários.
-    \item \textbf{Detecção de Pontos:} Utiliza um sensor de alcance para detectar mudanças súbitas na distância até o obstáculo mais próximo. Mudanças súbitas são identificadas quando a distância varia significativamente em um curto intervalo de tempo.
+    \item O PointBug é um algoritmo de navegação recentemente desenvolvido, para robôs em ambientes planares desconhecidos com obstáculos estacionários.
+    \item Utiliza um sensor de alcance para detectar mudanças súbitas na distância até o obstáculo mais próximo (detecção de pontos).
+    \begin{itemize}
+      \item Mudanças súbitas são identificadas quando a distância varia significativamente em um curto intervalo de tempo.
+    \end{itemize}
+    \item Eficaz para resolver o problema de mínimos locais em ambientes desconhecidos, identificando pontos súbitos de maneira confiável.
     \item \textbf{Determinação do Próximo Ponto:} O próximo ponto de movimento é determinado pela saída do sensor de alcance, baseando-se na variação ($\Delta{d}$) da distância detectada.
     \item \textbf{Funcionamento do Algoritmo:} O robô inicialmente se direciona ao ponto-alvo, rotacionando para localizar um ponto súbito e mover-se em sua direção. Esse processo se repete até o robô atingir o ponto-alvo.
-    \item \textbf{Resolução de Problemas de Mínimos Locais:} O algoritmo é eficaz para resolver o problema de mínimos locais em ambientes desconhecidos, identificando pontos súbitos de maneira confiável.
-    \item \textbf{Exemplos e Demonstrações:} O artigo \cite{buniyamin2011simple} analisa obstáculos de diferentes formas e como o algoritmo identifica os pontos súbitos.
 \begin{lstlisting}
 While Not Target
   If robot rotation <= 360
