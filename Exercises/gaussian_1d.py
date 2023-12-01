@@ -10,11 +10,11 @@ mu = 0
 sigma = .2
 y = gaussian_1d(x, mu, sigma)
 
-fig = plt.figure(figsize=(15,15), dpi=400)
+fig = plt.figure(figsize=(8,5), dpi=400)
 ax = fig.add_subplot(111, aspect='equal')
 
 ax.plot(x, y, 'b-')
 
-# ax.axis([-2, 2, 0, 1])
-ax.grid(True)
+ax.axis([-4, 4, 0, 3])
+ax.grid()
 plt.show()
