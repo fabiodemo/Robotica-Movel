@@ -1,8 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-from scipy.stats import norm
-from scipy.stats import multivariate_normal
+from scipy.stats import norm, multivariate_normal
 
 x, y = np.mgrid[-3:3:.01, -3:3:.01]
 pos = np.dstack((x, y))
