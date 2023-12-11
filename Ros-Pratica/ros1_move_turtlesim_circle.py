@@ -3,7 +3,7 @@ from geometry_msgs.msg import Twist
 import time
 
 
-def move_square(radius):
+def turtle_circle(radius):
     rospy.init_node('turtlesim', anonymous=True)
     pub = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=10)
 
