@@ -1,9 +1,9 @@
 import rospy
 from geometry_msgs.msg import Twist
-import sys
+import time
 
 
-def turtle_circle(radius):
+def move_square(side_length, speed):
     rospy.init_node('turtlesim', anonymous=True)
     pub = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=10)
 
