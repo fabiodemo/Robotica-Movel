@@ -113,7 +113,7 @@
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
 
-\title[A Simple Local Path Planning Algorithm for Autonomous Mobile Robots]{A Simple Local Path Planning Algorithm for Autonomous Mobile Robots} % The short title appears at the bottom of every slide, the full title is only on the title page
+\title[An experimental system for incremental environment modelling by an autonomous mobile robot]{An experimental system for incremental environment modelling by an autonomous mobile robot} % The short title appears at the bottom of every slide, the full title is only on the title page
 
 \author[FDR]{Fábio Demo da Rosa} % Your name
 %\includegraphics[]{logositeredes.png}
@@ -158,15 +158,103 @@ Disciplina de Robótica Móvel\\
     \item É necessário determinar rotas, para passar ou chegar até pontos específicos do ambiente.
     \item As abordagens para planejar a trajetória são de acordo com o ambiente, o tipo de sensor, as capacidades do robô, entre outros.
     \begin{itemize}
-      \item tais abordagens estão gradualmente buscando um melhor desempenho em termos de tempo, distância, custo e complexidade \cite{buniyamin2011simple}.
+      \item tais abordagens estão gradualmente buscando um melhor desempenho em termos de tempo, distância, custo e complexidade \cite{moutarlier2006experimental}.
     \end{itemize}
   \end{itemize}
 \end{frame}
 
 %------------------------------------------------
-\section{Abordagens de Planejamento de Trajetória}
+\section{Importância do Mapeamento Incremental}
 %------------------------------------------------
+\begin{frame}
+  \frametitle{Importância do Mapeamento Incremental}
+  \begin{itemize}
+      \item Operações-chave: Percepção, reconhecimento, decisão e navegação.
+      \item Impacto dos erros sensoriais acumulativos.
+  \end{itemize}
+\end{frame}
 
+%------------------------------------------------
+\section{Abordagem Teórica}
+%------------------------------------------------
+\begin{frame}
+  \frametitle{Abordagem Teórica}
+  \begin{itemize}
+      \item Filtragem de Kalman e fusão de dados sensoriais.
+      \item Desafios com a natureza não linear do problema.
+  \end{itemize}
+\end{frame}
+  
+%------------------------------------------------
+\section{Modelagem Local e Global}
+%------------------------------------------------
+\begin{frame}
+  \frametitle{Modelagem Local e Global}
+  \begin{itemize}
+      \item Dados Experimentais: Uso de robô com laser e odometria.
+      \item Segmentação de dados do sensor laser.
+  \end{itemize}
+\end{frame}
+  
+
+%------------------------------------------------
+\section{Ferramentas Matemáticas para Tratar Inexatidões dos Sensores}
+%------------------------------------------------
+  \begin{frame}
+  \frametitle{Ferramentas Matemáticas para Tratar Inexatidões dos Sensores}
+  \begin{itemize}
+      \item Tipos de Sensores e erros associados.
+      \item Problemas com erros de movimento e representação global.
+  \end{itemize}
+  \end{frame}
+  
+
+%------------------------------------------------
+\section{Representação Básica e Posicionamento do Robô}
+%------------------------------------------------
+  \begin{frame}
+  \frametitle{Representação Básica e Posicionamento do Robô}
+  \begin{itemize}
+      \item Comparação entre representação relacional e de localização.
+      \item Escolha de um quadro de referência único.
+  \end{itemize}
+  \end{frame}
+  
+
+%------------------------------------------------
+\section{Avaliação de Inexatidões e Calibração}
+%------------------------------------------------
+  \begin{frame}
+  \frametitle{Avaliação de Inexatidões e Calibração}
+  \begin{itemize}
+      \item Avaliação da deriva odometria.
+      \item Calibração do sensor laser.
+  \end{itemize}
+  \end{frame}
+  
+
+%------------------------------------------------
+\section{Estratégias de Correspondência e Atualização do Modelo}
+%------------------------------------------------
+  \begin{frame}
+  \frametitle{Estratégias de Correspondência e Atualização do Modelo}
+  \begin{itemize}
+      \item Correção de posição e correspondência de segmentos.
+      \item Uso de variações para correspondência de segmentos.
+  \end{itemize}
+  \end{frame}
+  
+
+%------------------------------------------------
+\section{Considerações finais}
+%------------------------------------------------
+  \begin{frame}
+  \frametitle{Considerações finais}
+  \begin{itemize}
+      \item Resultados e capacidade do sistema.
+      \item Desafios futuros e agradecimentos.
+  \end{itemize}
+  \end{frame}
 
 %------------------------------------------------
 %\section*{Referências}
