@@ -181,7 +181,10 @@ Disciplina de Robótica Móvel\\
   \begin{itemize}
       \item Abordagem Rigorosa: Uso de filtragem de Kalman para fusão de dados sensoriais estocásticos.
       \item Desafios: Instabilidade devido à natureza não linear do problema, especialmente sem uma boa calibração da variância de ruído do sensor.
-      \item Solução Proposta: Dentro do formalismo apresentado, maneiras de contornar o problema.
+      \item Solução: Formalismo que pode tratar a fusão de dados em contextos não lineares. 
+      \begin{itemize}
+        \item É proposto um sistema que pode ajustar a representação do estado do robô e do ambiente de forma incremental, considerando a incerteza e a correlação dos dados dos sensores \cite{moutarlier2006experimental}.
+      \end{itemize}
   \end{itemize}
 \end{frame}
   
@@ -207,6 +210,13 @@ Disciplina de Robótica Móvel\\
       \item Uso de Sensores: Diferentes tipos de sensores usados para mapeamento incremental.
       \item Problemas com Erros de Movimento: Como os erros de movimento se acumulam com as imprecisões de percepção.
       \item Abordagem Proposta: Uma abordagem baseada em métodos estocásticos para construir uma representação consistente do ambiente.
+      \begin{figure}
+        \centering
+        \copyrightbox[b]{\includegraphics[scale=0.35]{figures/1_Laser_Range_Finder_Raw_Data.png}}%
+        {Fonte: \cite{buniyamin2011simple}}
+        \caption{Dados brutos do sensor laser.}
+        \label{fig:1_range_sensor_obstacle}
+      \end{figure}
   \end{itemize}
   \end{frame}
   
@@ -218,6 +228,10 @@ Disciplina de Robótica Móvel\\
   \frametitle{Representação Básica e Posicionamento do Robô}
   \begin{itemize}
       \item Comparação entre representação relacional e de localização.
+      \begin{itemize}
+        \item Representação Relacional: Nesta abordagem, os objetos são relacionados uns aos outros por transformações incertas entre seus quadros de referência. É como um gráfico de relações, onde cada objeto é um nó e as arestas representam as relações espaciais. No entanto, pode ser complexo atualizar todas as relações à medida que novos dados são coletados.
+        Representação de Localização: Todos os quadros de referência dos objetos locais são referenciados a um quadro de referência global ou absoluto. Essa abordagem simplifica a atualização do modelo do ambiente, pois cada atualização é feita em relação a esse quadro global.
+      \end{itemize}
       \item Escolhas de Representação: Relacional vs. Localização.
       \item Decisão de Design: Uso de um quadro de referência único.
       \item Vantagens: Facilita o uso de um vetor de estado único para representar todos os objetos, incluindo o robô.
