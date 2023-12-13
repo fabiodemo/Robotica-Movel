@@ -199,7 +199,7 @@ Disciplina de Robótica Móvel\\
       \item Segmentação e Extração de Características: Processos usados para criar uma representação de nível superior a partir dos dados brutos.
       \begin{figure}
         \centering
-        \copyrightbox[b]{\includegraphics[scale=0.35]{figures/2_local_segmentation.png}}%
+        \copyrightbox[b]{\includegraphics[scale=0.30]{figures/2_local_segmentation.png}}%
         {Fonte: \cite{buniyamin2011simple}}
         \caption{Segmentação local.}
         \label{fig:1_range_sensor_obstacle}
@@ -219,7 +219,7 @@ Disciplina de Robótica Móvel\\
       \item Abordagem Proposta: Uma abordagem baseada em métodos estocásticos para construir uma representação consistente do ambiente.
       \begin{figure}
         \centering
-        \copyrightbox[b]{\includegraphics[scale=0.35]{figures/1_Laser_Range_Finder_Raw_Data.png}}%
+        \copyrightbox[b]{\includegraphics[scale=0.30]{figures/1_Laser_Range_Finder_Raw_Data.png}}%
         {Fonte: \cite{buniyamin2011simple}}
         \caption{Dados brutos do sensor laser.}
         \label{fig:1_range_sensor_obstacle}
@@ -237,7 +237,7 @@ Disciplina de Robótica Móvel\\
       \item Comparação entre representação relacional e de localização.
       \begin{itemize}
         \item Representação Relacional: Objeto são ligados através de transformações incertas, formando um gráfico onde as conexões espaciais são complexas de atualizar com novos dados.
-        \item Representação de Localização: Usa um quadro de referência comum para todos os objetos, simplificando a atualização do modelo ambiental.
+        \item Representação de Localização: Usa um quadro de referência único/comum para todos os objetos, simplificando a atualização do modelo ambiental.
       \end{itemize}
       \item Decisão de Design do artigo: Uso de um quadro de referência único \cite{moutarlier2006experimental}.
       \item Vantagens: Facilita o uso de um vetor de estado único para representar todos os objetos, incluindo o robô.
@@ -265,45 +265,44 @@ Disciplina de Robótica Móvel\\
   \begin{itemize}
       \item Correspondência Heurística: Correção da posição do robô baseada em heurísticas e correspondência de segmentos.
       \item Correspondência Estocástica: Uso de variações conhecidas para corresponder segmentos de percepção com recursos do modelo.
-      \begin{figure}
-        \centering
-        \copyrightbox[b]{\includegraphics[scale=0.35]{figures/3_last_model_and_Current_perceptions_superposition.png}}%
-        {Fonte: \cite{buniyamin2011simple}}
-        \caption{Superposição do Último Modelo e Percepções Atuais.}
-        \label{fig:3}
-      \end{figure}
 
       \begin{figure}
         \centering
-        \copyrightbox[b]{\includegraphics[scale=0.35]{figures/4_prediction_model.png}}%
+        \copyrightbox[b]{\includegraphics[scale=0.30]{figures/5_heuristic_matchings.png}}%
         {Fonte: \cite{buniyamin2011simple}}
-        \caption{Modelo de Previsão.}
-        \label{fig:4}
-      \end{figure}
-
-      \begin{figure}
-        \centering
-        \copyrightbox[b]{\includegraphics[scale=0.35]{figures/5_heuristic_matchings.png}}%
-        {Fonte: \cite{buniyamin2011simple}}
-        \caption{Correspondências Heurísticas.}
+        \caption{Atualização dos Pontos de Extremidade.}
         \label{fig:5}
       \end{figure}
 
       \begin{figure}
         \centering
-        \copyrightbox[b]{\includegraphics[scale=0.35]{figures/6_endpoints_updating.png}}%
-        {Fonte: \cite{buniyamin2011simple}}
-        \caption{Atualização dos Pontos de Extremidade.}
-        \label{fig:6}
-      \end{figure}
-            
-      \begin{figure}
-        \centering
-        \copyrightbox[b]{\includegraphics[scale=0.35]{figures/7_global_approach_instability.png}}%
-        {Fonte: \cite{buniyamin2011simple}}
-        \caption{Atualização dos Pontos de Extremidade.}
-        \label{fig:7}
-      \end{figure}
+        % Figura 3
+        \begin{minipage}{0.31\textwidth}
+            \centering
+            \copyrightbox[b]{\includegraphics[scale=0.25]{figures/3_last_model_and_Current_perceptions_superposition.png}}%
+            {Fonte: \cite{buniyamin2011simple}}
+            \caption{Superposição do Último Modelo e Percepções Atuais.}
+            \label{fig:3}
+        \end{minipage}
+        \hfill % Espaço entre as figuras
+        % Figura 6
+        \begin{minipage}{0.31\textwidth}
+            \centering
+            \copyrightbox[b]{\includegraphics[scale=0.25]{figures/6_endpoints_updating.png}}%
+            {Fonte: \cite{buniyamin2011simple}}
+            \caption{Correspondências Heurísticas.}
+            \label{fig:6}
+        \end{minipage}
+        \hfill % Espaço entre as figuras
+        % Figura 7
+        \begin{minipage}{0.31\textwidth}
+            \centering
+            \copyrightbox[b]{\includegraphics[scale=0.25]{figures/7_global_approach_instability.png}}%
+            {Fonte: \cite{buniyamin2011simple}}
+            \caption{Atualização dos Pontos de Extremidade.}
+            \label{fig:7}
+        \end{minipage}
+    \end{figure}
 
   \end{itemize}
 \end{frame}
@@ -319,19 +318,19 @@ Disciplina de Robótica Móvel\\
       \item Desafios Futuros: Melhorias necessárias no modelo de imprecisões dos sensores, especialmente para odometria.
       \begin{figure}
         \centering
-        \copyrightbox[b]{\includegraphics[scale=0.35]{figures/8_actual_experiment_of_incremental_environment_modelling.png}}%
+        \copyrightbox[b]{\includegraphics[scale=0.30]{figures/8_actual_experiment_of_incremental_environment_modelling.png}}%
         {Fonte: \cite{buniyamin2011simple}}
         \caption{Experimento Atual de Modelagem Ambiental Incremental.}
         \label{fig:8}
       \end{figure}
 
-      \begin{figure}
-        \centering
-        \copyrightbox[b]{\includegraphics[scale=0.35]{figures/9_actual_experiment_of_incremental_environment_modelling.png}}%
-        {Fonte: \cite{buniyamin2011simple}}
-        \caption{Experimento Atual de Modelagem Ambiental Incremental.}
-        \label{fig:9}
-      \end{figure}
+      % \begin{figure}
+      %   \centering
+      %   \copyrightbox[b]{\includegraphics[scale=0.35]{figures/9_actual_experiment_of_incremental_environment_modelling.png}}%
+      %   {Fonte: \cite{buniyamin2011simple}}
+      %   \caption{Experimento Atual de Modelagem Ambiental Incremental.}
+      %   \label{fig:9}
+      % \end{figure}
 
   \end{itemize}
 \end{frame}
