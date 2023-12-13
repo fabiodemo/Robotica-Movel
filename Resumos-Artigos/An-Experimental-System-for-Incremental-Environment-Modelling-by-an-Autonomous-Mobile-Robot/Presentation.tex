@@ -166,10 +166,15 @@ Disciplina de Robótica Móvel\\
 \begin{frame}
   \frametitle{Importância do Mapeamento Incremental}
   \begin{itemize}
-      \item Operações-chave: Percepção, reconhecimento, decisão e navegação.
-      \item Impacto dos erros sensoriais acumulativos.
-      \item Acúmulo de Erros: Como os erros sensoriais se acumulam durante o processo de percepção-modelagem.
-      \item Efeito de Erros Anteriores: Impacto nos cálculos atuais
+      \item Operações-chave: 
+      \begin{itemize}
+        \item Percepção, reconhecimento, decisão e navegação.
+      \end{itemize}
+      \item Acúmulo de Erros: 
+      \begin{itemize}
+        \item Como os erros sensoriais se acumulam durante o processo de percepção-modelagem.
+        \item Erros anteriores impactam diretamente nos cálculos atuais.
+      \end{itemize}
   \end{itemize}
 \end{frame}
 
@@ -179,10 +184,14 @@ Disciplina de Robótica Móvel\\
 \begin{frame}
   \frametitle{Abordagem Teórica}
   \begin{itemize}
-      \item Abordagem Rigorosa: Uso de filtragem de Kalman para fusão de dados sensoriais estocásticos.
-      \item Desafios: Instabilidade devido à natureza não linear do problema, especialmente sem uma boa calibração da variância de ruído do sensor.
-      \item Solução: Formalismo que pode tratar a fusão de dados em contextos não lineares. 
+      \item Uso de filtragem de Kalman para fusão de dados sensoriais estocásticos.
+      \item Desafios dessa abordagem: 
       \begin{itemize}
+        \item Instabilidade devido à natureza não linear do problema, especialmente sem uma boa calibração da variância de ruído do sensor.
+      \end{itemize}
+      \item Possível solução: 
+      \begin{itemize}
+        \item Formalismo que pode tratar a fusão de dados em contextos não lineares. 
         \item É proposto um sistema que pode ajustar a representação do estado do robô e do ambiente de forma incremental, considerando a incerteza e a correlação dos dados dos sensores \cite{moutarlier2006experimental}.
       \end{itemize}
   \end{itemize}
@@ -194,9 +203,18 @@ Disciplina de Robótica Móvel\\
 \begin{frame}[allowframebreaks, fragile]
   \frametitle{Modelagem Local e Global}
   \begin{itemize}
-      \item Necessidade de Modelagem Local: Conversão de dados brutos do sensor em um modelo local para correspondência com um modelo global.
-      \item Desafio com Dados Brutos: Dados brutos de sensores, como um localizador a laser, são geralmente pobres e instáveis para uso direto.
-      \item Segmentação e Extração de Características: Processos usados para criar uma representação de nível superior a partir dos dados brutos.
+      \item Necessidade de Modelagem Local: 
+      \begin{itemize}
+        \item Conversão de dados brutos do sensor em um modelo local para correspondência com um modelo global.
+      \end{itemize}
+      \item Desafio com Dados Brutos:
+      \begin{itemize}
+        \item Dados brutos de sensores, como um localizador a laser, são geralmente pobres e instáveis para uso direto.
+      \end{itemize}
+      \item Segmentação e Extração de Características:
+      \begin{itemize}
+        \item Processos usados para criar uma representação de nível superior a partir dos dados brutos.
+      \end{itemize}
       \begin{figure}
         \centering
         \copyrightbox[b]{\includegraphics[scale=0.30]{figures/2_local_segmentation.png}}%
@@ -214,9 +232,19 @@ Disciplina de Robótica Móvel\\
   \begin{frame}[allowframebreaks, fragile]
   \frametitle{Ferramentas Matemáticas para Tratar Inexatidões dos Sensores}
   \begin{itemize}
-      \item Uso de Sensores: Diferentes tipos de sensores usados para mapeamento incremental.
-      \item Problemas com Erros de Movimento: Como os erros de movimento se acumulam com as imprecisões de percepção.
-      \item Abordagem Proposta: Uma abordagem baseada em métodos estocásticos para construir uma representação consistente do ambiente.
+      \item Uso de Sensores: 
+      \begin{itemize}
+        \item Diferentes tipos de sensores usados para mapeamento incremental.
+      \end{itemize}
+      \item Problemas com Erros de Movimento:
+      \begin{itemize}
+        \item Como os erros de movimento se acumulam com as imprecisões de percepção.
+      \end{itemize}
+      \item Abordagem Proposta:
+      \begin{itemize}
+        \item Uma abordagem baseada em métodos estocásticos para construir uma representação consistente do ambiente.
+      \end{itemize}
+
       \begin{figure}
         \centering
         \copyrightbox[b]{\includegraphics[scale=0.30]{figures/1_Laser_Range_Finder_Raw_Data.png}}%
@@ -236,11 +264,20 @@ Disciplina de Robótica Móvel\\
   \begin{itemize}
       \item Comparação entre representação relacional e de localização.
       \begin{itemize}
-        \item Representação Relacional: Objeto são ligados através de transformações incertas, formando um gráfico onde as conexões espaciais são complexas de atualizar com novos dados.
-        \item Representação de Localização: Usa um quadro de referência único/comum para todos os objetos, simplificando a atualização do modelo ambiental.
+        \item Representação Relacional: 
+        \begin{itemize}
+          \item Objeto são ligados através de transformações incertas, formando um gráfico onde as conexões espaciais são complexas de atualizar com novos dados. 
+        \end{itemize}
+        \item Representação de Localização:
+        \begin{itemize}
+          \item Usa um quadro de referência único/comum para todos os objetos, simplificando a atualização do modelo ambiental.
+        \end{itemize}
       \end{itemize}
-      \item Decisão de Design do artigo: Uso de um quadro de referência único \cite{moutarlier2006experimental}.
-      \item Vantagens: Facilita o uso de um vetor de estado único para representar todos os objetos, incluindo o robô.
+      \item Decisão de Design do artigo: 
+      \begin{itemize}
+        \item Uso de um quadro de referência único \cite{moutarlier2006experimental}.
+        \item Tal quadro Facilita o uso de um vetor de estado único para representar todos os objetos, incluindo o robô.
+      \end{itemize}
   \end{itemize}
 \end{frame}
   
@@ -251,8 +288,14 @@ Disciplina de Robótica Móvel\\
   \begin{frame}
   \frametitle{Avaliação de Inexatidões e Calibração}
   \begin{itemize}
-      \item Avaliação da Deriva Odometria: Estimativa da posição do robô com base na leitura de codificadores angulares nas rodas.
-      \item Calibração do Sensor Laser: Desafios e métodos usados para calibrar o sensor laser para melhor precisão.
+      \item Avaliação da Deriva Odometria: 
+      \begin{itemize}
+        \item Estimativa da posição do robô com base na leitura de codificadores angulares nas rodas.
+      \end{itemize}
+      \item Calibração do Sensor Laser:
+      \begin{itemize}
+        \item Desafios e métodos usados para calibrar o sensor laser para melhor precisão.
+      \end{itemize}
   \end{itemize}
 \end{frame}
   
@@ -263,12 +306,18 @@ Disciplina de Robótica Móvel\\
   \begin{frame}[allowframebreaks, fragile]
   \frametitle{Estratégias de Correspondência e Atualização do Modelo}
   \begin{itemize}
-      \item Correspondência Heurística: Correção da posição do robô baseada em heurísticas e correspondência de segmentos.
-      \item Correspondência Estocástica: Uso de variações conhecidas para corresponder segmentos de percepção com recursos do modelo.
+      \item Correspondência Heurística: 
+      \begin{itemize}
+        \item Correção da posição do robô baseada em heurísticas e correspondência de segmentos.
+      \end{itemize}
+      \item Correspondência Estocástica:
+      \begin{itemize}
+        \item  Uso de variações conhecidas para corresponder segmentos de percepção com recursos do modelo.
+      \end{itemize}
 
       \begin{figure}
         \centering
-        \copyrightbox[b]{\includegraphics[scale=0.30]{figures/5_heuristic_matchings.png}}%
+        \copyrightbox[b]{\includegraphics[scale=0.28]{figures/5_heuristic_matchings.png}}%
         {Fonte: \cite{buniyamin2011simple}}
         \caption{Atualização dos Pontos de Extremidade.}
         \label{fig:5}
@@ -314,8 +363,14 @@ Disciplina de Robótica Móvel\\
   \begin{frame}[allowframebreaks, fragile]
   \frametitle{Considerações finais}
   \begin{itemize}
-      \item Capacidade do Sistema: Demonstração da capacidade do sistema em lidar com imprecisões e construir um modelo ambiental consistente.
-      \item Desafios Futuros: Melhorias necessárias no modelo de imprecisões dos sensores, especialmente para odometria.
+      \item Capacidade do Sistema:
+      \begin{itemize}
+        \item Demonstração da capacidade do sistema em lidar com imprecisões e construir um modelo ambiental consistente.
+      \end{itemize}
+      \item Desafios Futuros:
+      \begin{itemize}
+        \item Melhorias necessárias no modelo de imprecisões dos sensores, especialmente para odometria.
+      \end{itemize}
       \begin{figure}
         \centering
         \copyrightbox[b]{\includegraphics[scale=0.30]{figures/8_actual_experiment_of_incremental_environment_modelling.png}}%
