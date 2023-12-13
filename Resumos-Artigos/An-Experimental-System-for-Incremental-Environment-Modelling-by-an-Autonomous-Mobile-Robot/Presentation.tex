@@ -154,12 +154,9 @@ Disciplina de Robótica Móvel\\
 \begin{frame}[fragile]
   \frametitle{Introdução}
   \begin{itemize}
-    \item O planejamento de trajetória/rota/caminho é um elemento crucial para robôs móveis.
-    \item É necessário determinar rotas, para passar ou chegar até pontos específicos do ambiente.
-    \item As abordagens para planejar a trajetória são de acordo com o ambiente, o tipo de sensor, as capacidades do robô, entre outros.
-    \begin{itemize}
-      \item tais abordagens estão gradualmente buscando um melhor desempenho em termos de tempo, distância, custo e complexidade \cite{moutarlier2006experimental}.
-    \end{itemize}
+    \item Mapeamento incremental por robôs autônomos.
+    \item Desafio de inconsistências e imprecisões nos dados dos sensores.
+    \item Solução: Processamento de imprecisões para modelagem consistente \cite{moutarlier2006experimental}.
   \end{itemize}
 \end{frame}
 
@@ -171,6 +168,8 @@ Disciplina de Robótica Móvel\\
   \begin{itemize}
       \item Operações-chave: Percepção, reconhecimento, decisão e navegação.
       \item Impacto dos erros sensoriais acumulativos.
+      \item Acúmulo de Erros: Como os erros sensoriais se acumulam durante o processo de percepção-modelagem.
+      \item Efeito de Erros Anteriores: Impacto nos cálculos atuais
   \end{itemize}
 \end{frame}
 
@@ -180,8 +179,9 @@ Disciplina de Robótica Móvel\\
 \begin{frame}
   \frametitle{Abordagem Teórica}
   \begin{itemize}
-      \item Filtragem de Kalman e fusão de dados sensoriais.
-      \item Desafios com a natureza não linear do problema.
+      \item Abordagem Rigorosa: Uso de filtragem de Kalman para fusão de dados sensoriais estocásticos.
+      \item Desafios: Instabilidade devido à natureza não linear do problema, especialmente sem uma boa calibração da variância de ruído do sensor.
+      \item Solução Proposta: Dentro do formalismo apresentado, maneiras de contornar o problema.
   \end{itemize}
 \end{frame}
   
@@ -191,8 +191,9 @@ Disciplina de Robótica Móvel\\
 \begin{frame}
   \frametitle{Modelagem Local e Global}
   \begin{itemize}
-      \item Dados Experimentais: Uso de robô com laser e odometria.
-      \item Segmentação de dados do sensor laser.
+      \item Necessidade de Modelagem Local: Conversão de dados brutos do sensor em um modelo local para correspondência com um modelo global.
+      \item Desafio com Dados Brutos: Dados brutos de sensores, como um localizador a laser, são geralmente pobres e instáveis para uso direto.
+      \item Segmentação e Extração de Características: Processos usados para criar uma representação de nível superior a partir dos dados brutos.
   \end{itemize}
 \end{frame}
   
@@ -203,8 +204,9 @@ Disciplina de Robótica Móvel\\
   \begin{frame}
   \frametitle{Ferramentas Matemáticas para Tratar Inexatidões dos Sensores}
   \begin{itemize}
-      \item Tipos de Sensores e erros associados.
-      \item Problemas com erros de movimento e representação global.
+      \item Uso de Sensores: Diferentes tipos de sensores usados para mapeamento incremental.
+      \item Problemas com Erros de Movimento: Como os erros de movimento se acumulam com as imprecisões de percepção.
+      \item Abordagem Proposta: Uma abordagem baseada em métodos estocásticos para construir uma representação consistente do ambiente.
   \end{itemize}
   \end{frame}
   
