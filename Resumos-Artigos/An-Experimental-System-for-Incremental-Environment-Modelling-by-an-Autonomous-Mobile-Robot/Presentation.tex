@@ -197,6 +197,13 @@ Disciplina de Robótica Móvel\\
       \item Necessidade de Modelagem Local: Conversão de dados brutos do sensor em um modelo local para correspondência com um modelo global.
       \item Desafio com Dados Brutos: Dados brutos de sensores, como um localizador a laser, são geralmente pobres e instáveis para uso direto.
       \item Segmentação e Extração de Características: Processos usados para criar uma representação de nível superior a partir dos dados brutos.
+      \begin{figure}
+        \centering
+        \copyrightbox[b]{\includegraphics[scale=0.35]{figures/2_local_segmentation.png}}%
+        {Fonte: \cite{buniyamin2011simple}}
+        \caption{Segmentação local.}
+        \label{fig:1_range_sensor_obstacle}
+      \end{figure}
   \end{itemize}
 \end{frame}
   
@@ -259,6 +266,46 @@ Disciplina de Robótica Móvel\\
   \begin{itemize}
       \item Correspondência Heurística: Correção da posição do robô baseada em heurísticas e correspondência de segmentos.
       \item Correspondência Estocástica: Uso de variações conhecidas para corresponder segmentos de percepção com recursos do modelo.
+      \begin{figure}
+        \centering
+        \copyrightbox[b]{\includegraphics[scale=0.35]{figures/3_last_model_and_Current_perceptions_superposition.png}}%
+        {Fonte: \cite{buniyamin2011simple}}
+        \caption{Superposição do Último Modelo e Percepções Atuais.}
+        \label{fig:3}
+      \end{figure}
+
+      \begin{figure}
+        \centering
+        \copyrightbox[b]{\includegraphics[scale=0.35]{figures/4_prediction_model.png}}%
+        {Fonte: \cite{buniyamin2011simple}}
+        \caption{Modelo de Previsão.}
+        \label{fig:4}
+      \end{figure}
+
+      \begin{figure}
+        \centering
+        \copyrightbox[b]{\includegraphics[scale=0.35]{figures/5_heuristic_matchings.png}}%
+        {Fonte: \cite{buniyamin2011simple}}
+        \caption{Correspondências Heurísticas.}
+        \label{fig:5}
+      \end{figure}
+
+      \begin{figure}
+        \centering
+        \copyrightbox[b]{\includegraphics[scale=0.35]{figures/6_endpoints_updating.png}}%
+        {Fonte: \cite{buniyamin2011simple}}
+        \caption{Atualização dos Pontos de Extremidade.}
+        \label{fig:6}
+      \end{figure}
+            
+      \begin{figure}
+        \centering
+        \copyrightbox[b]{\includegraphics[scale=0.35]{figures/7_global_approach_instability.png}}%
+        {Fonte: \cite{buniyamin2011simple}}
+        \caption{Atualização dos Pontos de Extremidade.}
+        \label{fig:7}
+      \end{figure}
+
   \end{itemize}
   \end{frame}
   
@@ -271,6 +318,22 @@ Disciplina de Robótica Móvel\\
   \begin{itemize}
       \item Capacidade do Sistema: Demonstração da capacidade do sistema em lidar com imprecisões e construir um modelo ambiental consistente.
       \item Desafios Futuros: Melhorias necessárias no modelo de imprecisões dos sensores, especialmente para odometria.
+      \begin{figure}
+        \centering
+        \copyrightbox[b]{\includegraphics[scale=0.35]{figures/8_actual_experiment_of_incremental_environment_modelling.png}}%
+        {Fonte: \cite{buniyamin2011simple}}
+        \caption{Experimento Atual de Modelagem Ambiental Incremental.}
+        \label{fig:8}
+      \end{figure}
+
+      \begin{figure}
+        \centering
+        \copyrightbox[b]{\includegraphics[scale=0.35]{figures/9_actual_experiment_of_incremental_environment_modelling.png}}%
+        {Fonte: \cite{buniyamin2011simple}}
+        \caption{Experimento Atual de Modelagem Ambiental Incremental.}
+        \label{fig:9}
+      \end{figure}
+
   \end{itemize}
   \end{frame}
 
