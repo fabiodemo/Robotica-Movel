@@ -191,7 +191,7 @@ Disciplina de Robótica Móvel\\
 %------------------------------------------------
 \section{Modelagem Local e Global}
 %------------------------------------------------
-\begin{frame}
+\begin{frame}[allowframebreaks, fragile]
   \frametitle{Modelagem Local e Global}
   \begin{itemize}
       \item Necessidade de Modelagem Local: Conversão de dados brutos do sensor em um modelo local para correspondência com um modelo global.
@@ -211,7 +211,7 @@ Disciplina de Robótica Móvel\\
 %------------------------------------------------
 \section{Ferramentas Matemáticas para Tratar Inexatidões dos Sensores}
 %------------------------------------------------
-  \begin{frame}
+  \begin{frame}[allowframebreaks, fragile]
   \frametitle{Ferramentas Matemáticas para Tratar Inexatidões dos Sensores}
   \begin{itemize}
       \item Uso de Sensores: Diferentes tipos de sensores usados para mapeamento incremental.
@@ -225,7 +225,7 @@ Disciplina de Robótica Móvel\\
         \label{fig:1_range_sensor_obstacle}
       \end{figure}
   \end{itemize}
-  \end{frame}
+\end{frame}
   
 
 %------------------------------------------------
@@ -236,14 +236,13 @@ Disciplina de Robótica Móvel\\
   \begin{itemize}
       \item Comparação entre representação relacional e de localização.
       \begin{itemize}
-        \item Representação Relacional: Nesta abordagem, os objetos são relacionados uns aos outros por transformações incertas entre seus quadros de referência. É como um gráfico de relações, onde cada objeto é um nó e as arestas representam as relações espaciais. No entanto, pode ser complexo atualizar todas as relações à medida que novos dados são coletados.
-        Representação de Localização: Todos os quadros de referência dos objetos locais são referenciados a um quadro de referência global ou absoluto. Essa abordagem simplifica a atualização do modelo do ambiente, pois cada atualização é feita em relação a esse quadro global.
+        \item Representação Relacional: Objeto são ligados através de transformações incertas, formando um gráfico onde as conexões espaciais são complexas de atualizar com novos dados.
+        \item Representação de Localização: Usa um quadro de referência comum para todos os objetos, simplificando a atualização do modelo ambiental.
       \end{itemize}
-      \item Escolhas de Representação: Relacional vs. Localização.
-      \item Decisão de Design: Uso de um quadro de referência único.
+      \item Decisão de Design do artigo: Uso de um quadro de referência único \cite{moutarlier2006experimental}.
       \item Vantagens: Facilita o uso de um vetor de estado único para representar todos os objetos, incluindo o robô.
   \end{itemize}
-  \end{frame}
+\end{frame}
   
 
 %------------------------------------------------
@@ -255,13 +254,13 @@ Disciplina de Robótica Móvel\\
       \item Avaliação da Deriva Odometria: Estimativa da posição do robô com base na leitura de codificadores angulares nas rodas.
       \item Calibração do Sensor Laser: Desafios e métodos usados para calibrar o sensor laser para melhor precisão.
   \end{itemize}
-  \end{frame}
+\end{frame}
   
 
 %------------------------------------------------
 \section{Estratégias de Correspondência e Atualização do Modelo}
 %------------------------------------------------
-  \begin{frame}
+  \begin{frame}[allowframebreaks, fragile]
   \frametitle{Estratégias de Correspondência e Atualização do Modelo}
   \begin{itemize}
       \item Correspondência Heurística: Correção da posição do robô baseada em heurísticas e correspondência de segmentos.
@@ -307,13 +306,13 @@ Disciplina de Robótica Móvel\\
       \end{figure}
 
   \end{itemize}
-  \end{frame}
+\end{frame}
   
 
 %------------------------------------------------
 \section{Considerações finais}
 %------------------------------------------------
-  \begin{frame}
+  \begin{frame}[allowframebreaks, fragile]
   \frametitle{Considerações finais}
   \begin{itemize}
       \item Capacidade do Sistema: Demonstração da capacidade do sistema em lidar com imprecisões e construir um modelo ambiental consistente.
@@ -335,7 +334,7 @@ Disciplina de Robótica Móvel\\
       \end{figure}
 
   \end{itemize}
-  \end{frame}
+\end{frame}
 
 %------------------------------------------------
 %\section*{Referências}
