@@ -10,17 +10,12 @@ def move():
     rate = rospy.Rate(10)
     vel = Twist()
 
-    distance = 5
+    distance = 10
     speed = 1.5
-    vel.linear.x = abs(0.5)
-    vel.linear.y = 0
-    vel.linear.x = 0
-    vel.angular.x = 0
-    vel.angular.y = 0
+    vel.linear.x = abs(0.5)  # Corrigido para manter essa linha
     vel.angular.z = 0
 
     while not rospy.is_shutdown():
-
         t0 = rospy.Time.now().to_sec()
         current_distance = 0
 
